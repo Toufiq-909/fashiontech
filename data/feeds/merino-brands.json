@@ -1,0 +1,535 @@
+{
+  "generatedAt": "2026-11-08T06:00:00.000Z",
+  "note": "Sample payloads shaped like permitted partner JSON feeds. Compositions, prices and source URLs were checked against the brands' own product pages in November 2026. Images are not supplied, so each product carries a placeholder.",
+  "feeds": [
+    {
+      "feedId": "feed-unbound-merino-json",
+      "brandSlug": "unbound-merino",
+      "adapter": "json",
+      "label": "Unbound Merino — partner JSON feed",
+      "endpoint": "https://partners.example.com/unbound-merino/products.json",
+      "credentialEnvVars": [
+        "UNBOUND_FEED_URL",
+        "UNBOUND_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "UM-ACTIVE-TEE",
+          "name": "Active Merino T-Shirt",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 145 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 145,
+          "price": 98,
+          "currency": "USD",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#1E1E1E"
+            }
+          ],
+          "imageUrl": "/images/products/um-active-tee.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://unboundmerino.com/products/active-t-shirt",
+          "availability": "in-stock",
+          "description": "A Woolmark-certified merino jersey tee with a 'Me Cool' finish, built for travel and daily wear.",
+          "fit": "Regular fit, straight hem",
+          "care": "Machine wash cool on wool cycle. Dry flat. Air between wears.",
+          "isNew": true,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "UM-SLEEP-CREW",
+          "name": "Ultrafine Merino Sleep Crew",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 165 gsm (15.5 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 165,
+          "price": 88,
+          "currency": "USD",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Heather Grey",
+              "hex": "#9A9A96"
+            }
+          ],
+          "imageUrl": "/images/products/um-sleep-crew.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://unboundmerino.com/products/mens-ultrafine-merino-sleep-crew",
+          "availability": "in-stock",
+          "description": "A soft 15.5 micron merino crew in a jersey knit, made for sleeping and long-haul travel.",
+          "fit": "Relaxed, long sleeve",
+          "care": "Machine wash cool on wool cycle. Dry flat.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-wool-and-prince-json",
+      "brandSlug": "wool-and-prince",
+      "adapter": "json",
+      "label": "Wool&Prince — partner JSON feed",
+      "endpoint": "https://partners.example.com/wool-and-prince/products.json",
+      "credentialEnvVars": [
+        "WOOLPRINCE_FEED_URL",
+        "WOOLPRINCE_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "WP-100-CREW",
+          "name": "100% Wool Crew Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 190 gsm (18.9 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 190,
+          "price": 90,
+          "currency": "USD",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#232323"
+            },
+            {
+              "name": "Washed Navy",
+              "hex": "#2F3B4C"
+            },
+            {
+              "name": "Hunter Green",
+              "hex": "#3C5442"
+            },
+            {
+              "name": "Cedarwood",
+              "hex": "#986C54"
+            },
+            {
+              "name": "Ocean Teal",
+              "hex": "#3C6E71"
+            },
+            {
+              "name": "Lavender",
+              "hex": "#B7A6C8"
+            },
+            {
+              "name": "Light Blue",
+              "hex": "#9BB7CE"
+            }
+          ],
+          "imageUrl": "/images/products/wp-100-crew.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://woolandprince.com/products/crew-neck-tee-100-washed-navy",
+          "availability": "in-stock",
+          "description": "An interlock-knit 100% merino crew, the piece the brand's 100-day experiment started with.",
+          "fit": "Regular fit, crew neck",
+          "care": "Machine wash cold, tumble dry low. No ironing needed.",
+          "isNew": true,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "WP-SIGNATURE-CREW",
+          "name": "Signature Crew Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "78% merino wool, 22% nylon, 160 gsm",
+          "compositionPercent": 78,
+          "compositionSource": "brand-product-data",
+          "gsm": 160,
+          "price": 84,
+          "currency": "EUR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Natural White",
+              "hex": "#EFEBE3"
+            }
+          ],
+          "imageUrl": "/images/products/wp-signature-crew.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://eu.woolandprince.com/products/crew-neck-t-shirt-natural-white",
+          "availability": "low-stock",
+          "description": "The lighter 160 gsm signature knit, with a 17.5 micron merino core and nylon for durability.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold. Tumble dry low.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-woolly-json",
+      "brandSlug": "woolly-clothing",
+      "adapter": "json",
+      "label": "Woolly Clothing — partner JSON feed",
+      "endpoint": "https://partners.example.com/woolly-clothing/products.json",
+      "credentialEnvVars": [
+        "WOOLLY_FEED_URL",
+        "WOOLLY_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "WC-EVERYDAY-CREW",
+          "name": "Everyday Crew Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% Australian merino wool, 175 gsm (17.5 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 175,
+          "price": 84,
+          "currency": "USD",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#1C1C1C"
+            },
+            {
+              "name": "Charcoal",
+              "hex": "#4A4A4A"
+            },
+            {
+              "name": "Fir",
+              "hex": "#4A5C46"
+            },
+            {
+              "name": "Loch",
+              "hex": "#4B6470"
+            },
+            {
+              "name": "Salmon",
+              "hex": "#D98C7A"
+            }
+          ],
+          "imageUrl": "/images/products/wc-everyday-crew.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.woolly.clothing/products/mens-merino-crew-tee",
+          "availability": "in-stock",
+          "description": "Woolmark-certified Australian merino in a plain crew, at a price below most travel-wear merino.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, dry flat.",
+          "isNew": true,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "WC-POLO",
+          "name": "The Polo",
+          "category": "shirts",
+          "fabric": "merino",
+          "composition": "100% Australian merino wool, 175 gsm (17.5 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 175,
+          "price": 84,
+          "currency": "USD",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#1C1C1C"
+            },
+            {
+              "name": "Silt",
+              "hex": "#A99B8A"
+            },
+            {
+              "name": "Fir",
+              "hex": "#4A5C46"
+            },
+            {
+              "name": "Loch",
+              "hex": "#4B6470"
+            }
+          ],
+          "imageUrl": "/images/products/wc-polo.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.woolly.clothing/products/mens-merino-polo",
+          "availability": "in-stock",
+          "description": "A pure-merino polo with a soft collar — the easiest way into wool without wearing a sweater.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, dry flat.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "WC-VNECK-W",
+          "name": "Women's V Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "95% Australian merino wool, 5% elastane, 175 gsm",
+          "compositionPercent": 95,
+          "compositionSource": "brand-product-data",
+          "gsm": 175,
+          "price": 84,
+          "currency": "USD",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Plum",
+              "hex": "#7F5283"
+            },
+            {
+              "name": "Fog",
+              "hex": "#C9C7C1"
+            },
+            {
+              "name": "Tannin",
+              "hex": "#8A6A4F"
+            },
+            {
+              "name": "Charcoal",
+              "hex": "#4A4A4A"
+            }
+          ],
+          "imageUrl": "/images/products/wc-vneck-w.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.woolly.clothing/products/womens-merino-vneck-tee",
+          "availability": "in-stock",
+          "description": "A merino V-neck with a little stretch, cut for everyday layering.",
+          "fit": "Slim-regular, V neck",
+          "care": "Machine wash cold, dry flat.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-merino-country-json",
+      "brandSlug": "merino-country",
+      "adapter": "json",
+      "label": "Merino Country — partner JSON feed",
+      "endpoint": "https://partners.example.com/merino-country/products.json",
+      "credentialEnvVars": [
+        "MERINOCOUNTRY_FEED_URL",
+        "MERINOCOUNTRY_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "MC-111-LS",
+          "name": "#111 Long Sleeve Crew Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% Australian merino wool, 175 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 175,
+          "price": 135,
+          "currency": "AUD",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#232323"
+            },
+            {
+              "name": "Latte",
+              "hex": "#C4B29B"
+            },
+            {
+              "name": "Olive",
+              "hex": "#6E7256"
+            },
+            {
+              "name": "Navy",
+              "hex": "#2C3A4C"
+            },
+            {
+              "name": "Burgundy",
+              "hex": "#6E2F35"
+            },
+            {
+              "name": "Light Grey Marle",
+              "hex": "#C3C2BE"
+            },
+            {
+              "name": "Charcoal",
+              "hex": "#4A4A4A"
+            }
+          ],
+          "imageUrl": "/images/products/mc-111-ls.png",
+          "imagePermission": false,
+          "sourceUrl": "https://www.merinocountry.com/products/111-long-sleeve-crew-neck-merino-t-shirt-175gsm",
+          "availability": "in-stock",
+          "description": "A lightweight 175 gsm single-knit merino long sleeve, made in Queensland from Australian wool.",
+          "fit": "Unisex, regular fit",
+          "care": "Warm machine wash, dry flat in shade.",
+          "isNew": true,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "MC-121L-SCOOP",
+          "name": "#121L Long Sleeve Scoop Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 175 gsm single knit jersey",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 175,
+          "price": 135,
+          "currency": "AUD",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "3XL"
+          ],
+          "colours": [
+            {
+              "name": "Teal",
+              "hex": "#2F6B6B"
+            },
+            {
+              "name": "Chilli Red",
+              "hex": "#B3402F"
+            },
+            {
+              "name": "Latte",
+              "hex": "#C4B29B"
+            },
+            {
+              "name": "Jacaranda Blue",
+              "hex": "#7C88C2"
+            },
+            {
+              "name": "Navy",
+              "hex": "#2C3A4C"
+            }
+          ],
+          "imageUrl": "/images/products/mc-121l-scoop.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.merinocountry.com/products/long-sleeve-scoop-neck-merino-t-shirt",
+          "availability": "in-stock",
+          "description": "A soft scoop-neck merino layer with no elastane, cut long in the body.",
+          "fit": "Relaxed, scoop neck",
+          "care": "Warm machine wash, dry flat in shade.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "MC-112-RAGLAN",
+          "name": "#112 Long Sleeve Raglan Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 275 gsm double knit jersey",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "gsm": 275,
+          "price": 145,
+          "currency": "AUD",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "3XL"
+          ],
+          "colours": [
+            {
+              "name": "Chilli Red",
+              "hex": "#B3402F"
+            },
+            {
+              "name": "Jacaranda Blue",
+              "hex": "#7C88C2"
+            },
+            {
+              "name": "Taupe",
+              "hex": "#A79A8B"
+            },
+            {
+              "name": "Natural",
+              "hex": "#E7DFD2"
+            },
+            {
+              "name": "Olive",
+              "hex": "#6E7256"
+            }
+          ],
+          "imageUrl": "/images/products/mc-112-raglan.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.merinocountry.com/products/raglan-long-sleeve-merino-tshirt-275gsm",
+          "availability": "low-stock",
+          "description": "A heavyweight 275 gsm interlock merino raglan for cold classrooms and colder trains.",
+          "fit": "Relaxed, raglan sleeve",
+          "care": "Warm machine wash, dry flat in shade.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "id": "brand-unbound-merino",
+    "slug": "unbound-merino",
+    "name": "Unbound Merino",
+    "kind": "partner",
+    "country": "Canada",
+    "website": "https://unboundmerino.com",
+    "logoMark": "UM",
+    "story": "Started by three friends who wanted to pack lighter, Unbound Merino builds a full wardrobe from Woolmark-certified, mulesing-free merino. The brand is built around washing less and wearing longer.",
+    "founded": "2016",
+    "fabrics": [
+      "merino"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Ships to India through its Rest of World zone (2–4 weeks, US$19.99); duties may apply on delivery.",
+    "fulfilment": "buy-at-brand",
+    "affiliateDisclosure": "Butterfly may earn a commission when you buy at Unbound Merino through our link. The price you pay is set by the brand.",
+    "termsNote": "Demo listing. Confirm affiliate programme terms and current India shipping rates before publishing.",
+    "featured": true,
+    "tone": "#677E61"
+  },
+  {
+    "id": "brand-wool-and-prince",
+    "slug": "wool-and-prince",
+    "name": "Wool&Prince",
+    "kind": "partner",
+    "country": "United States",
+    "website": "https://woolandprince.com",
+    "logoMark": "W&P",
+    "story": "A Portland brand built on one wool shirt worn for 100 days. Wool&Prince makes machine-washable merino essentials with a published supply chain and a \"own less, own better\" idea.",
+    "founded": "2013",
+    "fabrics": [
+      "merino"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Ships to India with FedEx International Connect Plus (3–7 business days, US$20, duties paid at checkout). International orders are final sale.",
+    "fulfilment": "buy-at-brand",
+    "affiliateDisclosure": "Butterfly may earn a commission when you buy at Wool&Prince through our link. The price you pay is set by the brand.",
+    "termsNote": "Demo listing. International orders are final sale — repeat this at the hand-off link.",
+    "featured": true,
+    "tone": "#7F5283"
+  },
+  {
+    "id": "brand-woolly-clothing",
+    "slug": "woolly-clothing",
+    "name": "Woolly Clothing Co",
+    "kind": "partner",
+    "country": "United States",
+    "website": "https://www.woolly.clothing",
+    "logoMark": "WC",
+    "story": "A Seattle basics label making 100% Australian merino tees, polos and underwear at prices below the travel-wear crowd. Wool is Woolmark-certified and the supply chain is RWS-certified.",
+    "founded": "2012",
+    "fabrics": [
+      "merino"
+    ],
+    "indiaDelivery": "marketplace",
+    "indiaNote": "Its own store ships within the US only. International delivery is through Amazon.com Global, subject to each listing's eligibility.",
+    "fulfilment": "buy-at-brand",
+    "affiliateDisclosure": "Butterfly may earn a commission when you buy at Woolly Clothing through our link. The price you pay is set by the brand or marketplace.",
+    "termsNote": "Demo listing. Do not promise India delivery from woolly.clothing itself; verify the Amazon Global listing first.",
+    "featured": false,
+    "tone": "#FB6C00"
+  },
+  {
+    "id": "brand-merino-country",
+    "slug": "merino-country",
+    "name": "Merino Country",
+    "kind": "partner",
+    "country": "Australia",
+    "website": "https://www.merinocountry.com",
+    "logoMark": "MC",
+    "story": "A family business that grew out of a Queensland sheep station in 1993. Merino Country makes pure-merino next-to-skin clothing in its own factory, from Australian wool.",
+    "founded": "1993",
+    "fabrics": [
+      "merino"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Ships worldwide and lists India with INR pricing at checkout. Duties may be payable on delivery.",
+    "fulfilment": "order-via-butterfly",
+    "affiliateDisclosure": "Butterfly takes your order and payment, then forwards it to Merino Country for fulfilment. Butterfly is not the manufacturer.",
+    "termsNote": "Demo listing. Requires a signed fulfilment arrangement before taking orders; confirm returns handling and duties with the brand.",
+    "featured": true,
+    "tone": "#73976A"
+  },
+  {
+    "id": "brand-marks-and-spencer-india",
+    "slug": "marks-and-spencer-india",
+    "name": "Marks & Spencer India",
+    "kind": "partner",
+    "country": "United Kingdom / India",
+    "website": "https://www.marksandspencer.in",
+    "logoMark": "M&S",
+    "story": "The Indian arm of the British retailer runs more than 90 full-line stores plus marksandspencer.in. Its Lyocell Rich range is a permanent part of womenswear, with lyocell-dominant blends.",
+    "founded": "1884",
+    "fabrics": [
+      "lyocell"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Delivers across India; free delivery on orders above ₹1,499.",
+    "fulfilment": "buy-at-brand",
+    "affiliateDisclosure": "Butterfly may earn a commission when you buy at Marks & Spencer India through our link. Prices, sizes and stock are set by the brand.",
+    "termsNote": "Demo listing. Confirm current affiliate arrangement and do not imply M&S endorses Butterfly.",
+    "featured": true,
+    "tone": "#BD4444"
+  },
+  {
+    "id": "brand-westside",
+    "slug": "westside",
+    "name": "Westside",
+    "kind": "partner",
+    "country": "India",
+    "website": "https://www.westside.com",
+    "logoMark": "WS",
+    "story": "Trent's large-format fashion chain, part of the Tata Group, selling in-house labels across hundreds of Indian stores and online. Its menswear lines include high-lyocell relaxed shirts.",
+    "founded": "1998",
+    "fabrics": [
+      "lyocell"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Pan-India delivery with a pincode checker on every product page.",
+    "fulfilment": "buy-at-brand",
+    "affiliateDisclosure": "Butterfly may earn a commission when you buy at Westside through our link. The price you pay is set by the brand.",
+    "termsNote": "Demo listing. Confirm affiliate programme before publishing links.",
+    "featured": false,
+    "tone": "#A6D1E6"
+  },
+  {
+    "id": "brand-w-for-woman",
+    "slug": "w-for-woman",
+    "name": "W for Woman",
+    "kind": "partner",
+    "country": "India",
+    "website": "https://www.wforwoman.com",
+    "logoMark": "W",
+    "story": "One of India's largest womenswear brands, spanning ethnic and western wear. Pure Tencel and lyocell trousers and tunics are a recurring part of its line.",
+    "founded": "1994",
+    "fabrics": [
+      "lyocell"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Free delivery across India, with cash on delivery available.",
+    "fulfilment": "order-via-butterfly",
+    "affiliateDisclosure": "Butterfly takes your order and payment, then forwards it to W for Woman for fulfilment. Butterfly is not the manufacturer.",
+    "termsNote": "Demo listing. Confirm wholesale/fulfilment terms and size availability with the brand before enabling orders.",
+    "featured": false,
+    "tone": "#F9B637"
+  },
+  {
+    "id": "brand-virgio",
+    "slug": "virgio",
+    "name": "VIRGIO",
+    "kind": "partner",
+    "country": "India",
+    "website": "https://www.virgio.com",
+    "logoMark": "V",
+    "story": "A Bengaluru direct-to-consumer label built around circularity and fair pricing, with a dedicated Lyocell collection. Several styles are 100% lyocell.",
+    "founded": "2022",
+    "fabrics": [
+      "lyocell"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Ships across India; free shipping above ₹1,499, cash on delivery available.",
+    "fulfilment": "buy-at-brand",
+    "affiliateDisclosure": "Butterfly may earn a commission when you buy at VIRGIO through our link. Prices are set by the brand.",
+    "termsNote": "Demo listing. Only list pieces whose lyocell percentage is published; exclude unverified blends.",
+    "featured": false,
+    "tone": "#F1DEC4"
+  },
+  {
+    "id": "brand-andamen",
+    "slug": "andamen",
+    "name": "Andamen",
+    "kind": "partner",
+    "country": "India",
+    "website": "https://www.andamen.com",
+    "logoMark": "A",
+    "story": "A Gurugram menswear label built on shirts, with a recurring Lyocell Linen family at 80% lyocell. Fabrics are made in India with partners including Raymond.",
+    "founded": "2014",
+    "fabrics": [
+      "lyocell"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Ships across India in 2–5 days. Does not offer international shipping.",
+    "fulfilment": "order-via-butterfly",
+    "affiliateDisclosure": "Butterfly takes your order and payment, then forwards it to Andamen for fulfilment. Butterfly is not the manufacturer.",
+    "termsNote": "Demo listing. Requires a signed fulfilment arrangement; confirm stock counts before enabling orders.",
+    "featured": true,
+    "tone": "#A6D1E6"
+  },
+  {
+    "id": "brand-cottonworld",
+    "slug": "cottonworld",
+    "name": "Cottonworld",
+    "kind": "partner",
+    "country": "India",
+    "website": "https://www.cottonworld.net",
+    "logoMark": "CW",
+    "story": "An Indian high-street chain since 1987, selling natural-fibre classics in 25+ stores. A standing Tencel range includes 100% Tencel blouses and cotton-lyocell shirting.",
+    "founded": "1987",
+    "fabrics": [
+      "lyocell"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Delivers within India only; the brand does not ship outside the country.",
+    "fulfilment": "buy-at-brand",
+    "affiliateDisclosure": "Butterfly may earn a commission when you buy at Cottonworld through our link. Prices are set by the brand.",
+    "termsNote": "Demo listing. Confirm affiliate terms and India-only delivery at checkout.",
+    "featured": false,
+    "tone": "#FFDD9C"
+  },
+  {
+    "id": "brand-butterfly-original",
+    "slug": "butterfly-original",
+    "name": "Butterfly Original",
+    "kind": "own-label",
+    "country": "India",
+    "website": "/design",
+    "logoMark": "B",
+    "story": "Our own label, produced with a manufacturing partner in India. Plain Merino and Lyocell basics made for customisation: t-shirts, hoodies, shirts and joggers.",
+    "fabrics": [
+      "merino",
+      "lyocell"
+    ],
+    "indiaDelivery": "direct",
+    "indiaNote": "Made and shipped in India by our manufacturing partner. Delivery in 5–8 working days.",
+    "fulfilment": "order-via-butterfly",
+    "affiliateDisclosure": "Made for Butterfly by our manufacturing partner in India. Butterfly takes the order, payment and customisation.",
+    "termsNote": "Own label. Keep the tech pack and composition certificate on file for every style and colour.",
+    "featured": false,
+    "tone": "#677E61"
+  }
+]

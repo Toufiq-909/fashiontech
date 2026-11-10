@@ -1,103 +1,497 @@
-import Image from "next/image";
+import Link from "next/link";
+import { ProductCard } from "@/components/ProductCard";
+import { ProductVisual } from "@/components/ProductVisual";
+import { PropertyBadges } from "@/components/PropertyBadges";
+import { Butterflies } from "@/components/Butterflies";
+import { ButterflyMark } from "@/components/brand/ButterflyMark";
+import { StarRating } from "@/components/StarRating";
+import {
+  brandById,
+  brands,
+  featuredBrands,
+  butterflyPicks,
+  retailProducts,
+} from "@/lib/catalog";
+import { getDb } from "@/lib/db";
+import { fabrics, site, tierConfig } from "@/lib/config";
+import { formatINR } from "@/lib/format";
+import type { Product } from "@/lib/types";
 
-export default function Home() {
+export const dynamic = "force-dynamic";
+
+export const metadata = {
+  title: "Butterfly — Live to Love",
+  description: site.description,
+  alternates: { canonical: "/" },
+};
+
+const LOOK_SEEDS = [
+  {
+    title: "The 9 a.m. lecture",
+    note: "A striped shirt that survives the commute, wide trousers, and a blue overshirt.",
+    slugs: ["eta-off-white-striped-relaxed-fit-shirt", "blue-denim-tencel-pleated-pants", "azure-blue-lyocell-linen-shirt"],
+  },
+  {
+    title: "Library, then dinner",
+    note: "One colour family, three textures. Nothing needs ironing.",
+    slugs: ["drift-brown-lyocell-linen-shirt", "blue-pintuck-denim-tunic", "cloud-white-lyocell-linen-shirt"],
+  },
+  {
+    title: "Sunday, slowly",
+    note: "A printed blouse, a marigold dress, and a soft bubble hem for the walk home.",
+    slugs: ["lyocell-rich-printed-crew-neck-blouse", "womens-tencel-sleeveless-blouse", "lyocell-rich-textured-bubble-hem-blouse"],
+  },
+];
+
+export default function HomePage() {
+  const all = retailProducts();
+  const newest = [...all]
+    .sort(
+      (a, b) =>
+        Number(b.isNew) - Number(a.isNew) || b.lastSyncedAt.localeCompare(a.lastSyncedAt),
+    )
+    .slice(0, 4);
+  const picks = butterflyPicks(4);
+  const featured = featuredBrands().slice(0, 4);
+  const feedback = getDb()
+    .feedback.filter((item) => item.featured)
+    .slice(0, 3);
+  const lookCards = LOOK_SEEDS.map((look) => ({
+    ...look,
+    products: look.slugs
+      .map((slug) => all.find((product) => product.slug === slug))
+      .filter((product): product is Product => Boolean(product)),
+  }));
+  const heroLooks = [
+    "lyocell-rich-textured-bubble-hem-blouse",
+    "cloud-white-lyocell-linen-shirt",
+    "blue-pintuck-denim-tunic",
+  ]
+    .map((slug) => all.find((product) => product.slug === slug))
+    .filter((product): product is Product => Boolean(product));
+  const collage = [
+    { slug: "lyocell-rich-printed-crew-neck-blouse", caption: "A print that does the thinking for you" },
+    { slug: "cloud-white-lyocell-linen-shirt", caption: "A white shirt without the ironing" },
+    { slug: "blue-denim-tencel-pleated-pants", caption: "Lyocell that falls, not clings" },
+  ].map((item) => ({ ...item, product: all.find((product) => product.slug === item.slug) }));
+  const total = all.length;
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <section className="hero">
+        <Butterflies />
+        <div className="shell">
+          <div className="hero-top">
+            <span className="hero-kicker">
+              <ButterflyMark size={14} wing="#FFDD9C" accent="#F9B637" body="#FEFBF6" />
+              Curated Merino &amp; Lyocell
+            </span>
+            <span>Bengaluru · shipping across India</span>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="hero-grid">
+            <div className="hero-copy hero-enter">
+              <h1 className="hero-type" aria-label="Live to Love.">
+                <span className="hero-line">Live to</span>
+                <span className="hero-line hero-line-accent">Love.</span>
+              </h1>
+              <p className="hero-lede">
+                Clothing should move with you, not restrict you. We bring together Merino wool and
+                Lyocell pieces from brands that believe the same thing.
+              </p>
+              <div className="hero-actions">
+                <Link className="btn btn-cream" href="/shop">
+                  Shop the latest
+                </Link>
+                <Link className="btn btn-ghost-cream" href="/try-on">
+                  Try it on virtually
+                </Link>
+              </div>
+            </div>
+
+            <div className="hero-art hero-enter-late">
+              {heroLooks[0] && (
+                <div className="hero-panel hero-panel-a">
+                  <ProductVisual product={heroLooks[0]} priority showNote={false} />
+                  <span className="hero-panel-chip">Butterfly Edit</span>
+                  <span className="hero-panel-label">
+                    {heroLooks[0].name} · {heroLooks[0].composition}
+                    <span className="block font-semibold">
+                      From {brandById(heroLooks[0].brandId)?.name}
+                    </span>
+                  </span>
+                </div>
+              )}
+              {heroLooks.slice(1).map((product, index) => (
+                <div
+                  key={product.id}
+                  className={`hero-panel ${index === 0 ? "hero-panel-b" : "hero-panel-c"}`}
+                >
+                  <ProductVisual
+                    product={product}
+                    brandTone={index === 0 ? "#F1DEC4" : "#FFDD9C"}
+                    priority
+                    showNote={false}
+                  />
+                  <span className="hero-panel-label">
+                    {product.name}
+                    <span className="block font-semibold">
+                      From {brandById(product.brandId)?.name}
+                    </span>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="hero-lower">
+            <span>
+              <strong>{total} pieces</strong> from {brands().filter((brand) => brand.kind === "partner").length} partner
+              brands
+            </span>
+            <span>Composition on every product page</span>
+            <span>Only 50%+ Merino or Lyocell</span>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <div className="ticker" aria-hidden="true">
+        <div className="ticker-track">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex gap-12 pr-12 whitespace-nowrap text-[0.72rem] font-semibold">
+              <span>Freedom to move</span>
+              <span>Merino &amp; Lyocell</span>
+              <span>Fabric verified</span>
+              <span>From brands we trust</span>
+              <span>Live to Love</span>
+              <span>Easy care</span>
+              <span>Made for 16–30</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <section className="section shell">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <p className="eyebrow">Latest work</p>
+            <h2 className="h2 mt-2">Newest on the rail</h2>
+            <p>
+              Our latest drop, synced from partner feeds and hand-picked where the fabric and the fit
+              earn it.
+            </p>
+          </div>
+          <Link className="link-arrow" href="/latest">
+            All new arrivals
+          </Link>
+        </div>
+        <div className="product-grid">
+          {newest.map((product, index) => {
+            const brand = brandById(product.brandId);
+            return brand ? (
+              <ProductCard key={product.id} product={product} brand={brand} priority={index < 2} />
+            ) : null;
+          })}
+        </div>
+        <div className="mt-6 flex flex-wrap gap-3 items-center justify-between">
+          <p className="text-[0.82rem] muted">
+            New arrivals sync automatically. The admin can pin or feature a piece.
+          </p>
+          <Link className="btn btn-secondary btn-sm" href="/shop">
+            Browse the catalogue
+          </Link>
+        </div>
+      </section>
+
+      <section className="statement-band">
+        <div className="shell statement-grid">
+          <div>
+            <p className="eyebrow" style={{ color: "#FFDD9C" }}>
+              The idea
+            </p>
+            <h2 className="statement-type mt-3">
+              Clothing should move with you, <em>not restrict you.</em>
+            </h2>
+          </div>
+          <div>
+            <p className="statement-side">
+              We combine natural fabrics, comfort and modern design so people can move, feel and
+              express themselves freely. Not formal. Not rigid. Not a uniform.
+            </p>
+            <div className="mt-5">
+              <Link className="btn btn-cream btn-sm" href="/about">
+                Read our story
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section shell">
+        <div className="story-split">
+          <div className="story-collage">
+            {collage.map((entry, position) => (
+              <div
+                key={entry.slug}
+                className={`collage-tile ${position === 0 ? "collage-tile-tall" : ""}`}
+              >
+                {entry.product && (
+                  <ProductVisual product={entry.product} showNote={false} priority={position === 0} />
+                )}
+                <span className="collage-caption">
+                  {entry.caption}
+                  {entry.product ? ` · From ${brandById(entry.product.brandId)?.name}` : ""}
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="story-copy">
+            <p className="eyebrow">Why Butterfly</p>
+            <h2 className="h1">The gap after the uniform.</h2>
+            <p>
+              Somewhere between school uniforms and a first salary, a lot of people are left to work
+              out what they actually like wearing. Butterfly is for that moment: freedom to move,
+              freedom from constant ironing, freedom from clothing that asks you to sit differently.
+            </p>
+            <p>
+              We pick the best Merino and Lyocell clothing from brands that share our idea of comfort
+              and freedom. The butterfly stands for transformation — not a finished look, a direction.
+            </p>
+            <blockquote>
+              &ldquo;We don&apos;t want to define your style; we want to give you the freedom to
+              define it yourself.&rdquo;
+            </blockquote>
+            <div className="cta-row mt-5">
+              <Link className="btn btn-sm" href="/about">
+                The Butterfly story
+              </Link>
+              <Link className="link-arrow" href="/brands">
+                Meet the brands
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-tight shell">
+        <div className="chrysalis-row">
+          {[
+            {
+              title: "Chrysalis",
+              copy: "You start with what you know: a uniform, a safe outfit, someone else's idea of right.",
+              colour: "#3D3C42",
+              size: 52,
+            },
+            {
+              title: "Emerging",
+              copy: "You try a fabric that feels different, a fit with room in it, a colour you chose yourself.",
+              colour: "#7F5283",
+              size: 44,
+            },
+            {
+              title: "Wings",
+              copy: "Fewer clothes, more outfits. Easy movement, easy care, and a style that is unmistakably yours.",
+              colour: "#677E61",
+              size: 52,
+            },
+          ].map((stage, index) => (
+            <div className="stage" key={stage.title}>
+              <span className="stage-num">0{index + 1}</span>
+              <span className="stage-art">
+                <ButterflyMark size={stage.size} wing={stage.colour} accent="#F9B637" body="#3D3C42" />
+              </span>
+              <h3>{stage.title}</h3>
+              <p>{stage.copy}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section shell">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <p className="eyebrow">Butterfly Picks</p>
+            <h2 className="h2 mt-2">The pieces we would buy first</h2>
+            <p>
+              Hand-picked by our team from across the catalogue — different brands, one idea of
+              comfort.
+            </p>
+          </div>
+          <Link className="link-arrow" href="/shop?pick=1">
+            All Picks
+          </Link>
+        </div>
+        <div className="product-grid">
+          {picks.map((product) => {
+            const brand = brandById(product.brandId);
+            return brand ? <ProductCard key={product.id} product={product} brand={brand} /> : null;
+          })}
+        </div>
+      </section>
+
+      <section className="section-tight shell">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <p className="eyebrow">Mix and match</p>
+            <h2 className="h2 mt-2">Three pieces, five outfits</h2>
+            <p>
+              Build different looks with fewer clothes. Each combination crosses brands, because the
+              wardrobe should not be a set.
+            </p>
+          </div>
+        </div>
+        <div className="look-grid">
+          {lookCards.map((look) => (
+            <article className="look-card" key={look.title}>
+              <div className="look-collage">
+                {look.products.slice(0, 3).map((product) => (
+                  <div key={product.id}>
+                    <ProductVisual
+                      product={product}
+                      brandTone={brandById(product.brandId)?.tone ?? "#F1DEC4"}
+                      showNote={false}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="look-body">
+                <h3>{look.title}</h3>
+                <p>{look.note}</p>
+                <p className="micro muted">
+                  {look.products.map((product) => brandById(product.brandId)?.name).filter(Boolean).join(" · ")}
+                </p>
+                <p className="look-price">
+                  {formatINR(look.products.reduce((sum, product) => sum + product.priceINR, 0))} for the look
+                </p>
+                {look.products[0] && (
+                  <Link className="link-arrow text-[0.85rem]" href={`/shop/${look.products[0].slug}`}>
+                    Start with the {look.products[0].category.replace("-", " ")}
+                  </Link>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="fabric-strip">
+        <div className="shell fabric-strip-inner">
+          <div>
+            <p className="eyebrow">The fibres</p>
+            <h2 className="h2 mt-2">Two fibres. One idea.</h2>
+            <p className="mt-3 max-w-[45ch] text-[0.95rem]">
+              Instead of choosing fabrics only for appearance, we want the materials themselves to
+              contribute to the experience of wearing Butterfly.
+            </p>
+            <div className="cta-row mt-4">
+              <Link className="btn btn-sm" href="/fabrics">
+                Merino vs Lyocell
+              </Link>
+              <span className="tag">₹{tierConfig["luxury-comfort"].min}–{tierConfig["luxury-comfort"].max} Merino</span>
+              <span className="tag">₹{tierConfig["everyday-value"].min}–{tierConfig["everyday-value"].max} Lyocell</span>
+            </div>
+          </div>
+          <div className="fabric-swatches">
+            {[...fabrics.merino.swatch, ...fabrics.lyocell.swatch].map((swatch) => (
+              <div
+                key={swatch.name}
+                className="fabric-swatch"
+                style={{ background: swatch.hex }}
+              >
+                <span>{swatch.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section shell">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <p className="eyebrow">What the fabric does</p>
+            <h2 className="h2 mt-2">Comfort you can name</h2>
+          </div>
+        </div>
+        <PropertyBadges />
+      </section>
+
+      <section className="section-tight shell">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <p className="eyebrow">Partner brands</p>
+            <h2 className="h2 mt-2">Curated, credited, never claimed</h2>
+            <p>
+              We select, present and sell. The brand named on each piece made it.
+            </p>
+          </div>
+          <Link className="link-arrow" href="/brands">
+            Full directory
+          </Link>
+        </div>
+        <div className="brand-strip">
+          {featured.map((brand) => (
+            <Link key={brand.id} href={`/brands/${brand.slug}`} className="brand-card">
+              <span className="brand-mark" aria-hidden="true">
+                {brand.logoMark}
+              </span>
+              <h3>{brand.name}</h3>
+              <span className="brand-tag">
+                {brand.fabrics.map((fabric) => fabrics[fabric].name).join(" · ")}
+              </span>
+              <p>{brand.indiaNote}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="section shell">
+        <div className="section-head">
+          <div className="section-head-copy">
+            <p className="eyebrow">From the community</p>
+            <h2 className="h2 mt-2">Notes from people in motion</h2>
+          </div>
+          <Link className="link-arrow" href="/feedback">
+            Feedback &amp; looks
+          </Link>
+        </div>
+        <div className="feedback-grid">
+          {feedback.map((item) => (
+            <article className="quote-card" key={item.id}>
+              <StarRating value={item.rating} />
+              <p>&ldquo;{item.message}&rdquo;</p>
+              <p className="quote-who">
+                {item.name} · verified customer
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section-tight shell">
+        <div className="tryon-banner">
+          <div>
+            <p className="eyebrow" style={{ color: "#FFDD9C" }}>
+              Virtual try-on
+            </p>
+            <h2 className="h2 mt-2">See it on you before you decide.</h2>
+            <p>
+              Upload a photo, choose a piece, and preview it on your own body. Your photo is processed
+              for the preview only — never used for marketing.
+            </p>
+            <div className="cta-row mt-5">
+              <Link className="btn" href="/try-on">
+                Try it on virtually
+              </Link>
+              <Link className="btn btn-ghost-cream" href="/design">
+                Or design your own
+              </Link>
+            </div>
+          </div>
+          <div className="tryon-banner-art" aria-hidden="true">
+            <ButterflyMark size={130} wing="#FFDD9C" accent="#F9B637" body="#FEFBF6" />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

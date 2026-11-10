@@ -1,0 +1,76 @@
+import Link from "next/link";
+import { ButterflyMark } from "@/components/brand/ButterflyMark";
+import { affiliateDisclosure, footerNav, site } from "@/lib/config";
+
+export function SiteFooter() {
+  return (
+    <footer className="site-footer on-green">
+      <div className="shell">
+        <div className="footer-top">
+          <div className="footer-brand">
+            <ButterflyMark size={54} wing="#FFDD9C" accent="#F9B637" body="#FEFBF6" />
+            <p className="footer-wordmark">butterfly</p>
+            <p className="footer-tagline">Live to Love</p>
+            <p className="footer-note">
+              Merino and Lyocell clothing curated for people who would rather move than adjust what
+              they are wearing.
+            </p>
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-social"
+            >
+              Instagram
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div className="footer-cols">
+            {footerNav.map((group) => (
+              <div key={group.title}>
+                <h2 className="footer-heading">{group.title}</h2>
+                <ul>
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <Link href={link.href}>{link.label}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+            <div>
+              <h2 className="footer-heading">Contact</h2>
+              <ul>
+                <li>
+                  <a href={`mailto:${site.email}`}>{site.email}</a>
+                </li>
+                <li>
+                  <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
+                </li>
+                <li className="footer-address">{site.address}</li>
+                <li>
+                  <Link href="/privacy">Privacy</Link>
+                </li>
+                <li>
+                  <Link href="/terms">Brand &amp; site terms</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-legal">
+          <p>{affiliateDisclosure}</p>
+          <p>
+            All products are designed and manufactured by the brand named on the product. Butterfly
+            curates, presents and sells these pieces; it does not claim them as its own. Butterfly
+            Originals is our own label, made with a manufacturing partner in India.
+          </p>
+          <p className="footer-fine">© {new Date().getFullYear()} Butterfly · Bengaluru, India</p>
+        </div>
+      </div>
+      <div className="footer-peacock peacock" aria-hidden="true" />
+    </footer>
+  );
+}

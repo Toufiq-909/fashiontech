@@ -1,0 +1,261 @@
+{
+  "checkedAt": "2026-11-10T08:46:36.284Z",
+  "rights": "reference",
+  "note": "Official product images downloaded from each brand's own CDN for this demonstration catalogue. They remain the property of the brand. Confirm affiliate/partner image permissions before publishing; they are not cleared for virtual try-on.",
+  "images": [
+    {
+      "sku": "UM-ACTIVE-TEE",
+      "brand": "Unbound Merino",
+      "productPage": "https://unboundmerino.com/products/active-t-shirt",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1491/5166/files/Unbound-Merino-Mens-Active-Merino-T-Shirt-Charcoal-1.jpg?v=1776494235&width=1200",
+      "localFile": "/images/products/um-active-tee.webp",
+      "bytes": 75190,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "UM-SLEEP-CREW",
+      "brand": "Unbound Merino",
+      "productPage": "https://unboundmerino.com/products/mens-ultrafine-merino-sleep-crew",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1491/5166/files/Unbound-Merino-Mens-Ultrafine-Merino-Sleep-Crew-Black-1_21d3a1af-0a9c-4305-be7b-1588aefd2bcb.jpg?v=1783996364&width=1200",
+      "localFile": "/images/products/um-sleep-crew.webp",
+      "bytes": 56546,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "WP-100-CREW",
+      "brand": "Wool&Prince",
+      "productPage": "https://woolandprince.com/products/crew-neck-tee-100-washed-navy",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0236/4195/files/20260326_WP_00117_100WoolCrewNeckTee_WashedNavy-LR.jpg?v=1777913172&width=1200",
+      "localFile": "/images/products/wp-100-crew.webp",
+      "bytes": 42174,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "WP-SIGNATURE-CREW",
+      "brand": "Wool&Prince",
+      "productPage": "https://woolandprince.com/products/crew-neck-t-shirt-natural-white",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0236/4195/files/20260326_WP_00231_SignatureCrewNeckTee_NaturalWhite-LR.jpg?v=1778187439&width=1200",
+      "localFile": "/images/products/wp-signature-crew.webp",
+      "bytes": 12402,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "WC-EVERYDAY-CREW",
+      "brand": "Woolly Clothing Co.",
+      "productPage": "https://www.woolly.clothing/products/mens-merino-crew-tee",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1204/3948/products/studio-2022-m-everyday-shortsleeve-crewneck-black-front-trent-1.jpg?v=1762882783&width=1200",
+      "localFile": "/images/products/wc-everyday-crew.webp",
+      "bytes": 54590,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "WC-POLO",
+      "brand": "Woolly Clothing Co.",
+      "productPage": "https://www.woolly.clothing/products/mens-merino-polo",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1204/3948/files/studio-2026-m-everyday-ss-polo-fir-front-doug-1.jpg?v=1781113376&width=1200",
+      "localFile": "/images/products/wc-polo.webp",
+      "bytes": 108008,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "WC-VNECK-W",
+      "brand": "Woolly Clothing Co.",
+      "productPage": "https://www.woolly.clothing/products/womens-merino-vneck-tee",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1204/3948/files/studio-w-everyday-ss-vneck-tannin-front-xs-2025-katya-3_de8db918-36c5-4cc2-a273-84b3d74150c2.jpg?v=1762894253&width=1200",
+      "localFile": "/images/products/wc-vneck-w.webp",
+      "bytes": 56780,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "MC-111-LS",
+      "brand": "Merino Country",
+      "productPage": "https://www.merinocountry.com/products/111-long-sleeve-crew-neck-merino-t-shirt-175gsm",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0084/0047/0082/files/111-long-sleeve-crew-Latte_unisexSQ_b93763ce-176d-4339-9be5-b3aeb4991712.png?v=1785984588&width=1200",
+      "localFile": "/images/products/mc-111-ls.png",
+      "bytes": 71064,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "MC-121L-SCOOP",
+      "brand": "Merino Country",
+      "productPage": "https://www.merinocountry.com/products/long-sleeve-scoop-neck-merino-t-shirt",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0084/0047/0082/products/121L-Scoop-Long-Sleeve-Shirt-black2.jpg?v=1765160494&width=1200",
+      "localFile": "/images/products/mc-121l-scoop.webp",
+      "bytes": 36430,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "MC-112-RAGLAN",
+      "brand": "Merino Country",
+      "productPage": "https://www.merinocountry.com/products/raglan-long-sleeve-merino-tshirt-275gsm",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0084/0047/0082/files/112-oliveWEB_72d0b05c-3fa3-4f79-8d52-72cc508343c1.jpg?v=1776399964&width=1200",
+      "localFile": "/images/products/mc-112-raglan.webp",
+      "bytes": 68202,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "MS-P60723313",
+      "brand": "Marks & Spencer India",
+      "productPage": "https://www.marksandspencer.in/lyocell-rich-printed-crew-neck-blouse/p/P60723313.html",
+      "imageUrl": "https://assets.digitalcontent.marksandspencer.app/image/upload/w_1008,h_1319,q_auto,f_auto,e_sharpen/SD_01_T43_3002W_N4_X_EC_0",
+      "localFile": "/images/products/ms-p60723313.webp",
+      "bytes": 206826,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "MS-P60723342",
+      "brand": "Marks & Spencer India",
+      "productPage": "https://www.marksandspencer.in/lyocell-rich-textured-bubble-hem-blouse/p/P60723342.html",
+      "imageUrl": "https://assets.digitalcontent.marksandspencer.app/image/upload/w_1008,h_1319,q_auto,f_auto,e_sharpen/SD_01_T43_3058W_J1_X_EC_0",
+      "localFile": "/images/products/ms-p60723342.webp",
+      "bytes": 193522,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "MS-P60789287",
+      "brand": "Marks & Spencer India",
+      "productPage": "https://www.marksandspencer.in/lyocell-rich-embroidered-notch-neck-blouse/p/P60789287.html",
+      "imageUrl": "https://assets.digitalcontent.marksandspencer.app/image/upload/w_1008,h_1319,q_auto,f_auto,e_sharpen/SD_01_T53_2692U_OO_X_EC_0",
+      "localFile": "/images/products/ms-p60789287.webp",
+      "bytes": 215184,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "WS-301086760",
+      "brand": "Westside",
+      "productPage": "https://www.westside.com/products/eta-off-white-striped-pattern-relaxed-fit-shirt-301086760",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0266/6276/4597/files/301086760OFFWHITE_1.jpg?v=1793169039&width=1200",
+      "localFile": "/images/products/ws-301086760.webp",
+      "bytes": 40148,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "W-23FEW62400",
+      "brand": "W for Woman",
+      "productPage": "https://www.wforwoman.com/products/blue-denim-tencel-pleated-pants-23few62400-704256",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0776/0419/2550/files/23FEW62400-704256_1.jpg?v=1721332523&width=1200",
+      "localFile": "/images/products/w-23few62400.webp",
+      "bytes": 142758,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "W-PINTUCK-TUNIC",
+      "brand": "W for Woman",
+      "productPage": "https://www.wforwoman.com/products/blue-pintuck-denim-tunic-24few30911-704256",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0776/0419/2550/files/24FEW30911-704256_1.jpg?v=1721331510&width=1200",
+      "localFile": "/images/products/w-pintuck-tunic.webp",
+      "bytes": 112852,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "AND-AZURE-LYOCELL",
+      "brand": "Andamen",
+      "productPage": "https://www.andamen.com/products/azure-blue-lyocell-linen-shirt",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0618/3183/9957/files/01_bd4aba32-131c-476e-9a0b-2f585e39d3fb.jpg?v=1786711919&width=1200",
+      "localFile": "/images/products/and-azure-lyocell.webp",
+      "bytes": 144404,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "AND-CLOUD-LYOCELL",
+      "brand": "Andamen",
+      "productPage": "https://www.andamen.com/products/cloud-white-linen-shirt",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0618/3183/9957/files/01_15e93895-3184-4ce5-8b65-e68c5e63be44.jpg?v=1787307759&width=1200",
+      "localFile": "/images/products/and-cloud-lyocell.webp",
+      "bytes": 142764,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "AND-DRIFT-LYOCELL",
+      "brand": "Andamen",
+      "productPage": "https://www.andamen.com/products/drift-brown-linen-shirt",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0618/3183/9957/files/01_a93945c2-c195-40d4-beb0-dca133957995.jpg?v=1787834455&width=1200",
+      "localFile": "/images/products/and-drift-lyocell.webp",
+      "bytes": 94430,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "VIR-XITI-DRESS",
+      "brand": "VIRGIO",
+      "productPage": "https://www.virgio.com/products/square-neck-sunshine-dress",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/0785/1674/8585/files/26th_July_Virgio-2362.jpg?v=1749548268&width=1200",
+      "localFile": "/images/products/vir-xiti-dress.webp",
+      "bytes": 106416,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "CW-M-SHIRT-10521",
+      "brand": "Cottonworld",
+      "productPage": "https://cottonworld.net/products/mens-cotton-lyocell-regular-fit-shirt-blue",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1231/6442/files/M-SHIRTS-10521-21390-BLUE_1.jpg?v=1762240434&width=1200",
+      "localFile": "/images/products/cw-m-shirt-10521.webp",
+      "bytes": 140390,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "CW-W-BLOUSE-DENIM",
+      "brand": "Cottonworld",
+      "productPage": "https://cottonworld.net/products/womens-tencel-regular-fit-sleeveless-blouse-denim",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1231/6442/files/L-BLOUSE-17751-21497-DENIM_1.jpg?v=1766558020&width=1200",
+      "localFile": "/images/products/cw-w-blouse-denim.webp",
+      "bytes": 175750,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "CW-W-BLOUSE-RUST",
+      "brand": "Cottonworld",
+      "productPage": "https://cottonworld.net/products/womens-tencel-linen-regular-fit-blouse-rust",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1231/6442/files/COTTONWORLDMODEL04521.jpg?v=1785157165&width=1200",
+      "localFile": "/images/products/cw-w-blouse-rust.webp",
+      "bytes": 128408,
+      "contentType": "image/webp",
+      "rights": "reference",
+      "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    }
+  ],
+  "skipped": []
+}

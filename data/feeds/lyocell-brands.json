@@ -1,0 +1,539 @@
+{
+  "generatedAt": "2026-11-08T06:00:00.000Z",
+  "note": "Sample payloads shaped like permitted partner JSON feeds. Compositions and INR prices were checked against the brands' own product pages in November 2026. Images are not supplied, so each product carries a placeholder.",
+  "feeds": [
+    {
+      "feedId": "feed-ms-india-json",
+      "brandSlug": "marks-and-spencer-india",
+      "adapter": "json",
+      "label": "Marks & Spencer India — partner JSON feed",
+      "endpoint": "https://partners.example.com/ms-india/products.json",
+      "credentialEnvVars": [
+        "MSINDIA_FEED_URL",
+        "MSINDIA_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "MS-P60723313",
+          "name": "Lyocell Rich Printed Crew Neck Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "85% lyocell, 15% polyamide",
+          "compositionPercent": 85,
+          "compositionSource": "brand-product-data",
+          "price": 799,
+          "currency": "INR",
+          "sizes": [
+            "UK 6",
+            "UK 8",
+            "UK 10",
+            "UK 12",
+            "UK 14",
+            "UK 16",
+            "UK 18",
+            "UK 20"
+          ],
+          "colours": [
+            {
+              "name": "Print",
+              "hex": "#B9C6C9"
+            }
+          ],
+          "imageUrl": "/images/products/ms-p60723313.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.marksandspencer.in/lyocell-rich-printed-crew-neck-blouse/p/P60723313.html",
+          "availability": "in-stock",
+          "description": "A fluid lyocell-rich blouse with a crew neck and an all-over print. Made for warm days that still need a collar.",
+          "fit": "Regular fit",
+          "care": "Machine washable at 40°C. Warm iron.",
+          "isNew": true,
+          "easyCare": false,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "MS-P60723342",
+          "name": "Lyocell Rich Textured Bubble Hem Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "72% lyocell, 28% polyamide; lining 100% cotton",
+          "compositionPercent": 72,
+          "compositionSource": "brand-product-data",
+          "price": 1449,
+          "currency": "INR",
+          "sizes": [
+            "UK 6",
+            "UK 8",
+            "UK 10",
+            "UK 12",
+            "UK 14",
+            "UK 16",
+            "UK 18",
+            "UK 20"
+          ],
+          "colours": [
+            {
+              "name": "Ivory",
+              "hex": "#EFE8DA"
+            }
+          ],
+          "imageUrl": "/images/products/ms-p60723342.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.marksandspencer.in/lyocell-rich-textured-bubble-hem-blouse/p/P60723342.html",
+          "availability": "in-stock",
+          "description": "A textured lyocell blouse with a bubble hem, made in India. Loose through the body, easy over trousers.",
+          "fit": "Relaxed, bubble hem",
+          "care": "Machine washable at 40°C.",
+          "isNew": false,
+          "easyCare": false,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "MS-P60789287",
+          "name": "Lyocell Rich Embroidered Notch Neck Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "70% lyocell, 30% linen; embroidery threads 100% polyester",
+          "compositionPercent": 70,
+          "compositionSource": "brand-product-data",
+          "price": 4199,
+          "currency": "INR",
+          "sizes": [
+            "UK 6",
+            "UK 8",
+            "UK 10",
+            "UK 12",
+            "UK 14",
+            "UK 16",
+            "UK 18",
+            "UK 20"
+          ],
+          "colours": [
+            {
+              "name": "Ecru",
+              "hex": "#E9DFCC"
+            }
+          ],
+          "imageUrl": "/images/products/ms-p60789287.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.marksandspencer.in/lyocell-rich-embroidered-notch-neck-blouse/p/P60789287.html",
+          "availability": "low-stock",
+          "description": "A lyocell-linen blouse with a notch neck and tonal embroidery, made in India.",
+          "fit": "Regular fit",
+          "care": "Machine washable at 40°C. Cool iron on reverse.",
+          "isNew": false,
+          "easyCare": false,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-westside-json",
+      "brandSlug": "westside",
+      "adapter": "json",
+      "label": "Westside — partner JSON feed",
+      "endpoint": "https://partners.example.com/westside/products.json",
+      "credentialEnvVars": [
+        "WESTSIDE_FEED_URL",
+        "WESTSIDE_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "WS-301086760",
+          "name": "ETA Off-White Striped Relaxed-Fit Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 14% linen, 6% cotton",
+          "compositionPercent": 80,
+          "compositionSource": "brand-product-data",
+          "price": 1499,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colours": [
+            {
+              "name": "Off-White",
+              "hex": "#F2EBDD"
+            }
+          ],
+          "imageUrl": "/images/products/ws-301086760.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.westside.com/products/eta-off-white-striped-pattern-relaxed-fit-shirt-301086760",
+          "availability": "in-stock",
+          "description": "A relaxed striped shirt in a lyocell-linen blend, cut with room through the body and sleeve.",
+          "fit": "Relaxed fit",
+          "care": "Machine wash cold, line dry.",
+          "isNew": true,
+          "easyCare": true,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-w-for-woman-json",
+      "brandSlug": "w-for-woman",
+      "adapter": "json",
+      "label": "W for Woman — partner JSON feed",
+      "endpoint": "https://partners.example.com/w-for-woman/products.json",
+      "credentialEnvVars": [
+        "WFORWOMAN_FEED_URL",
+        "WFORWOMAN_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "W-23FEW62400",
+          "name": "Blue Denim Tencel Pleated Pants",
+          "category": "pants",
+          "fabric": "lyocell",
+          "composition": "100% lyocell (Tencel denim)",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "price": 1080,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "3XL"
+          ],
+          "colours": [
+            {
+              "name": "Blue Denim",
+              "hex": "#4A6484"
+            }
+          ],
+          "imageUrl": "/images/products/w-23few62400.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.wforwoman.com/products/blue-denim-tencel-pleated-pants-23few62400-704256",
+          "availability": "low-stock",
+          "description": "Wide, pleated Tencel-denim trousers with a soft drape and a high waist.",
+          "fit": "Relaxed, high rise",
+          "care": "Machine wash cold inside out. Line dry.",
+          "isNew": true,
+          "easyCare": false,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "W-PINTUCK-TUNIC",
+          "name": "Blue Pintuck Denim Tunic",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "100% lyocell",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "price": 1240,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Blue Denim",
+              "hex": "#4A6484"
+            }
+          ],
+          "imageUrl": "/images/products/w-pintuck-tunic.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.wforwoman.com/products/blue-pintuck-denim-tunic-24few30911-704256",
+          "availability": "in-stock",
+          "description": "A longline tunic in Tencel denim, with a mandarin collar, pin-tuck yoke and high-low hem.",
+          "fit": "Straight, below hip",
+          "care": "Machine wash cold. Line dry.",
+          "isNew": false,
+          "easyCare": false,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-andamen-json",
+      "brandSlug": "andamen",
+      "adapter": "json",
+      "label": "Andamen — partner JSON feed",
+      "endpoint": "https://partners.example.com/andamen/products.json",
+      "credentialEnvVars": [
+        "ANDAMEN_FEED_URL",
+        "ANDAMEN_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "AND-AZURE-LYOCELL",
+          "name": "Azure Blue Lyocell Linen Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 20% linen",
+          "compositionPercent": 80,
+          "compositionSource": "brand-product-data",
+          "price": 4599,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Azure Blue",
+              "hex": "#6E93B5"
+            }
+          ],
+          "imageUrl": "/images/products/and-azure-lyocell.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.andamen.com/products/azure-blue-lyocell-linen-shirt",
+          "availability": "in-stock",
+          "description": "An 80% lyocell shirt with linen for texture, cut regular or slim. Made in India.",
+          "fit": "Regular or slim",
+          "care": "Machine wash cold, gentle. Line dry in shade.",
+          "isNew": true,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "AND-CLOUD-LYOCELL",
+          "name": "Cloud White Lyocell Linen Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 20% linen",
+          "compositionPercent": 80,
+          "compositionSource": "brand-product-data",
+          "price": 4599,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Cloud White",
+              "hex": "#F3EEE5"
+            }
+          ],
+          "imageUrl": "/images/products/and-cloud-lyocell.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.andamen.com/products/cloud-white-linen-shirt",
+          "availability": "low-stock",
+          "description": "The white version of the Lyocell Linen shirt: fluid, light and easy to dress up or down.",
+          "fit": "Regular or slim",
+          "care": "Machine wash cold, gentle. Line dry in shade.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "AND-DRIFT-LYOCELL",
+          "name": "Drift Brown Lyocell Linen Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 20% linen",
+          "compositionPercent": 80,
+          "compositionSource": "brand-product-data",
+          "price": 4599,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Drift Brown",
+              "hex": "#8C6A52"
+            }
+          ],
+          "imageUrl": "/images/products/and-drift-lyocell.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.andamen.com/products/drift-brown-linen-shirt",
+          "availability": "in-stock",
+          "description": "A brown lyocell-linen shirt and one of the brand's best sellers, with a soft collar and single pocket.",
+          "fit": "Regular or slim",
+          "care": "Machine wash cold, gentle. Line dry in shade.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-virgio-json",
+      "brandSlug": "virgio",
+      "adapter": "json",
+      "label": "VIRGIO — partner JSON feed",
+      "endpoint": "https://partners.example.com/virgio/products.json",
+      "credentialEnvVars": [
+        "VIRGIO_FEED_URL",
+        "VIRGIO_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "VIR-XITI-DRESS",
+          "name": "Xiti 100% Lyocell Mini Dress",
+          "category": "other",
+          "fabric": "lyocell",
+          "composition": "100% lyocell",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "price": 899,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colours": [
+            {
+              "name": "Warm Yellow",
+              "hex": "#E6C15C"
+            }
+          ],
+          "imageUrl": "/images/products/vir-xiti-dress.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://www.virgio.com/products/square-neck-sunshine-dress",
+          "availability": "low-stock",
+          "reviewNote": "Dress falls outside our shirts / pants / tees / hoodies categories. Hold for review.",
+          "description": "A square-neck mini dress in warm yellow. Listed as 100% lyocell.",
+          "fit": "Fitted bodice, flared skirt",
+          "care": "Machine wash cold.",
+          "isNew": true,
+          "easyCare": false,
+          "imageRights": "reference"
+        }
+      ]
+    },
+    {
+      "feedId": "feed-cottonworld-json",
+      "brandSlug": "cottonworld",
+      "adapter": "json",
+      "label": "Cottonworld — partner JSON feed",
+      "endpoint": "https://partners.example.com/cottonworld/products.json",
+      "credentialEnvVars": [
+        "COTTONWORLD_FEED_URL",
+        "COTTONWORLD_FEED_TOKEN"
+      ],
+      "products": [
+        {
+          "sku": "CW-M-SHIRT-10521",
+          "name": "Men's Cotton Lyocell Regular Fit Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "50% cotton, 50% lyocell",
+          "compositionPercent": 50,
+          "compositionSource": "brand-product-data",
+          "price": 1195,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Blue",
+              "hex": "#56718C"
+            }
+          ],
+          "imageUrl": "/images/products/cw-m-shirt-10521.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://cottonworld.net/products/mens-cotton-lyocell-regular-fit-shirt-blue",
+          "availability": "in-stock",
+          "description": "A half-cotton, half-lyocell shirt with the crispness of cotton and the drape of lyocell.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, line dry.",
+          "isNew": false,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "CW-W-BLOUSE-DENIM",
+          "name": "Women's Tencel Sleeveless Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "100% Tencel (lyocell)",
+          "compositionPercent": 100,
+          "compositionSource": "brand-product-data",
+          "price": 995,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Denim",
+              "hex": "#5C7189"
+            }
+          ],
+          "imageUrl": "/images/products/cw-w-blouse-denim.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://cottonworld.net/products/womens-tencel-regular-fit-sleeveless-blouse-denim",
+          "availability": "in-stock",
+          "description": "A sleeveless Tencel blouse with a straight hem, made for layering under an open shirt.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, line dry.",
+          "isNew": true,
+          "easyCare": true,
+          "imageRights": "reference"
+        },
+        {
+          "sku": "CW-W-BLOUSE-RUST",
+          "name": "Women's Tencel Linen Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "60% Tencel (lyocell), 40% linen",
+          "compositionPercent": 60,
+          "compositionSource": "brand-product-data",
+          "price": 2290,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Rust",
+              "hex": "#B05B3C"
+            }
+          ],
+          "imageUrl": "/images/products/cw-w-blouse-rust.webp",
+          "imagePermission": false,
+          "sourceUrl": "https://cottonworld.net/products/womens-tencel-linen-regular-fit-blouse-rust",
+          "availability": "in-stock",
+          "description": "Tencel with linen for a drier hand-feel, in a rust colour that works with sand and ink.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, line dry in shade.",
+          "isNew": false,
+          "easyCare": false,
+          "imageRights": "reference"
+        }
+      ]
+    }
+  ]
+}
