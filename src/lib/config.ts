@@ -125,7 +125,6 @@ export const sizeGuide = [
 export const nav = [
   { href: "/shop", label: "Shop" },
   { href: "/latest", label: "New arrivals" },
-  { href: "/brands", label: "Brands" },
   { href: "/fabrics", label: "Fabrics" },
   { href: "/try-on", label: "Try on" },
   { href: "/design", label: "Design your own" },

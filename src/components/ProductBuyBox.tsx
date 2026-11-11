@@ -90,12 +90,7 @@ export function ProductBuyBox({
   return (
     <div className="buybox">
       <h1>{product.name}</h1>
-      <div className="brand-line">
-        <span>From</span>
-        <Link href={`/brands/${brand.slug}`}>{brand.name}</Link>
-        <span aria-hidden="true">·</span>
-        <span>{brand.country}</span>
-      </div>
+     
 
       <div className="price-row">
         <span className="price-big">{formatINR(product.priceINR)}</span>
@@ -110,7 +105,7 @@ export function ProductBuyBox({
           : `Converted from ${product.sourceCurrency} ${product.sourcePrice} at ₹${product.fxRateUsed}/${product.sourceCurrency}. The brand sets the source price; duties may apply.`}
       </p>
 
-      <div className="option-block">
+      {/* <div className="option-block">
         <div className="option-label">
           <span>Colour · {colour}</span>
         </div>
@@ -128,7 +123,7 @@ export function ProductBuyBox({
             </button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className="option-block">
         <div className="option-label">
@@ -150,74 +145,7 @@ export function ProductBuyBox({
         </div>
       </div>
 
-      {buyAtBrand ? (
-        <div className="fulfilment-box">
-          <strong>Buy at {brand.name}</strong>
-          Butterfly sends you to the brand&apos;s own checkout. {brand.indiaNote}
-          <div className="fulfilment-actions">
-            <a
-              className="btn btn-sm"
-              href={externalHref}
-              target="_blank"
-              rel="noopener noreferrer nofollow sponsored"
-            >
-              Buy at {brand.name} <span aria-hidden="true">↗</span>
-            </a>
-          </div>
-          <p className="micro mt-2">{brand.affiliateDisclosure}</p>
-        </div>
-      ) : (
-        <>
-          <div className="option-block">
-            <div className="option-label">
-              <span>Quantity</span>
-            </div>
-            <div className="qty" aria-label="Quantity">
-              <button type="button" onClick={() => setQty((value) => Math.max(1, value - 1))} aria-label="Decrease quantity">
-                −
-              </button>
-              <span aria-live="polite">{qty}</span>
-              <button type="button" onClick={() => setQty((value) => Math.min(10, value + 1))} aria-label="Increase quantity">
-                +
-              </button>
-            </div>
-          </div>
-
-          <div className="buy-actions">
-            <button type="button" className="btn" onClick={onAdd} disabled={product.availability === "sold-out"}>
-              {product.availability === "sold-out" ? "Sold out" : added ? "Added — add again" : "Add to cart"}
-            </button>
-            <button type="button" className="btn btn-secondary" onClick={toggleWishlist}>
-              {wishlisted ? "Saved to wishlist" : "Save to wishlist"}
-            </button>
-          </div>
-          {added && (
-            <div className="notice mt-3">
-              Added to your cart.{" "}
-              <Link className="link-under" href="/cart">
-                View cart
-              </Link>{" "}
-              or{" "}
-              <Link className="link-under" href="/shop">
-                keep browsing
-              </Link>
-              .
-            </div>
-          )}
-          {error && <p className="error-text mt-2" role="alert">{error}</p>}
-          {wishError && <p className="error-text mt-2" role="alert">{wishError}</p>}
-
-          <div className="fulfilment-box">
-            <strong>Order via Butterfly</strong>
-            Butterfly takes your order and payment, then forwards it to {brand.name} for fulfilment.
-            {brand.indiaNote} Returns are handled under Butterfly&apos;s returns policy; see{" "}
-            <Link className="link-under" href="/shipping-returns">
-              shipping &amp; returns
-            </Link>
-            .
-          </div>
-        </>
-      )}
+      
 
       {product.tryOnEligible ? (
         <div className="product-tryon">

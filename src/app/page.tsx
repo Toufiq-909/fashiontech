@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductVisual } from "@/components/ProductVisual";
 import { PropertyBadges } from "@/components/PropertyBadges";
-import { Butterflies } from "@/components/Butterflies";
 import { ButterflyMark } from "@/components/brand/ButterflyMark";
 import { StarRating } from "@/components/StarRating";
 import {
@@ -62,13 +61,6 @@ export default function HomePage() {
       .map((slug) => all.find((product) => product.slug === slug))
       .filter((product): product is Product => Boolean(product)),
   }));
-  const heroLooks = [
-    "lyocell-rich-textured-bubble-hem-blouse",
-    "cloud-white-lyocell-linen-shirt",
-    "blue-pintuck-denim-tunic",
-  ]
-    .map((slug) => all.find((product) => product.slug === slug))
-    .filter((product): product is Product => Boolean(product));
   const collage = [
     { slug: "lyocell-rich-printed-crew-neck-blouse", caption: "A print that does the thinking for you" },
     { slug: "cloud-white-lyocell-linen-shirt", caption: "A white shirt without the ironing" },
@@ -79,12 +71,15 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <Butterflies />
+        <video className="hero-video" autoPlay muted loop playsInline poster="/images/products/w-23few62400.webp">
+          <source src="/videos/twc_web_banner_2025.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-wash" aria-hidden="true" />
         <div className="shell">
           <div className="hero-top">
             <span className="hero-kicker">
-              <ButterflyMark size={14} wing="#FFDD9C" accent="#F9B637" body="#FEFBF6" />
-              Curated Merino &amp; Lyocell
+              <ButterflyMark size={14} wing="#E6D6BD" accent="#C6A464" body="#F4F0E8" />
+              Natural fibres, considered
             </span>
             <span>Bengaluru · shipping across India</span>
           </div>
@@ -92,56 +87,28 @@ export default function HomePage() {
           <div className="hero-grid">
             <div className="hero-copy hero-enter">
               <h1 className="hero-type" aria-label="Live to Love.">
-                <span className="hero-line">Live to</span>
-                <span className="hero-line hero-line-accent">Love.</span>
+                <span className="hero-line">Made for</span>
+                <span className="hero-line hero-line-accent">living.</span>
               </h1>
               <p className="hero-lede">
-                Clothing should move with you, not restrict you. We bring together Merino wool and
-                Lyocell pieces from brands that believe the same thing.
+                A quieter, more natural wardrobe: beautifully made Merino and Lyocell pieces selected
+                for the way they feel, move and endure.
               </p>
               <div className="hero-actions">
-                <Link className="btn btn-cream" href="/shop">
-                  Shop the latest
+                <Link className="btn btn-hero-primary" href="/shop">
+                  Explore the collection
                 </Link>
-                <Link className="btn btn-ghost-cream" href="/try-on">
-                  Try it on virtually
+                <Link className="btn btn-hero-secondary" href="/fabrics">
+                  Meet the fibres
                 </Link>
               </div>
             </div>
 
-            <div className="hero-art hero-enter-late">
-              {heroLooks[0] && (
-                <div className="hero-panel hero-panel-a">
-                  <ProductVisual product={heroLooks[0]} priority showNote={false} />
-                  <span className="hero-panel-chip">Butterfly Edit</span>
-                  <span className="hero-panel-label">
-                    {heroLooks[0].name} · {heroLooks[0].composition}
-                    <span className="block font-semibold">
-                      From {brandById(heroLooks[0].brandId)?.name}
-                    </span>
-                  </span>
-                </div>
-              )}
-              {heroLooks.slice(1).map((product, index) => (
-                <div
-                  key={product.id}
-                  className={`hero-panel ${index === 0 ? "hero-panel-b" : "hero-panel-c"}`}
-                >
-                  <ProductVisual
-                    product={product}
-                    brandTone={index === 0 ? "#F1DEC4" : "#FFDD9C"}
-                    priority
-                    showNote={false}
-                  />
-                  <span className="hero-panel-label">
-                    {product.name}
-                    <span className="block font-semibold">
-                      From {brandById(product.brandId)?.name}
-                    </span>
-                  </span>
-                </div>
-              ))}
-            </div>
+            <aside className="hero-edition hero-enter-late" aria-label="Butterfly collection note">
+              <span className="hero-edition-number">01 / 03</span>
+              <p>THE NATURAL EDIT</p>
+              <span>Clothes with a softer footprint and a stronger point of view.</span>
+            </aside>
           </div>
 
           <div className="hero-lower">
@@ -149,8 +116,8 @@ export default function HomePage() {
               <strong>{total} pieces</strong> from {brands().filter((brand) => brand.kind === "partner").length} partner
               brands
             </span>
-            <span>Composition on every product page</span>
-            <span>Only 50%+ Merino or Lyocell</span>
+            <span>Traceable composition on every product page</span>
+            <span>Merino &amp; Lyocell, from brands we trust</span>
           </div>
         </div>
       </section>

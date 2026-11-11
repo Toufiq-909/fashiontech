@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-cream: #fefbf6;
-  --color-sky: #a6d1e6;
-  --color-plum: #7f5283;
-  --color-ink: #3d3c42;
-  --color-flame: #fb6c00;
-  --color-amber: #f9b637;
-  --color-peach: #ffdd9c;
-  --color-ember: #e73f1e;
-  --color-brick: #bd4444;
-  --color-sand: #f1dec4;
-  --color-sage: #73976a;
-  --color-forest: #677e61;
+  --color-cream: #f4f0e8;
+  --color-sky: #d5ded8;
+  --color-plum: #762638;
+  --color-ink: #1f2822;
+  --color-flame: #b6372d;
+  --color-amber: #c6a464;
+  --color-peach: #e6d6bd;
+  --color-ember: #a92f28;
+  --color-brick: #862c29;
+  --color-sand: #ddd0bc;
+  --color-sage: #657668;
+  --color-forest: #26392f;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-inter-tight), var(--font-inter), ui-sans-serif, sans-serif;
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
 }
 
 :root {
@@ -36,9 +36,9 @@ html {
 }
 
 body {
-  background: #fefbf6;
-  color: #3d3c42;
-  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  background: #f4f0e8;
+  color: #1f2822;
+  font-family: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   overflow-x: hidden;
@@ -47,18 +47,18 @@ body {
 }
 
 ::selection {
-  background: #f9b637;
-  color: #3d3c42;
+  background: #c6a464;
+  color: #1f2822;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-inter-tight), var(--font-inter), sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 0.98;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 0.92;
   text-wrap: balance;
 }
 
@@ -85,7 +85,7 @@ img {
 }
 
 :focus-visible {
-  outline: 2px solid #7f5283;
+  outline: 2px solid #762638;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -201,8 +201,8 @@ img {
   padding: 0.75rem 1.4rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: #677e61;
-  color: #fefbf6;
+  background: #26392f;
+  color: #f4f0e8;
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: -0.01em;
@@ -214,7 +214,7 @@ img {
     transform 0.2s ease;
 }
 .btn:hover {
-  background: #3d3c42;
+  background: #762638;
 }
 .btn:active {
   transform: translateY(1px);
@@ -225,22 +225,22 @@ img {
 }
 .btn-secondary {
   background: transparent;
-  color: #3d3c42;
-  border-color: #677e61;
+  color: #1f2822;
+  border-color: #26392f;
 }
 .btn-secondary:hover {
-  background: #677e61;
-  color: #fefbf6;
+  background: #26392f;
+  color: #f4f0e8;
 }
 .btn-cream {
-  background: #fefbf6;
-  color: #3d3c42;
-  border-color: #fefbf6;
+  background: #f4f0e8;
+  color: #1f2822;
+  border-color: #f4f0e8;
 }
 .btn-cream:hover {
-  background: #ffdd9c;
-  border-color: #ffdd9c;
-  color: #3d3c42;
+  background: #e6d6bd;
+  border-color: #e6d6bd;
+  color: #1f2822;
 }
 .btn-ghost-cream {
   background: transparent;
@@ -432,8 +432,8 @@ img {
 .product-art {
   position: relative;
   overflow: hidden;
-  border-radius: 18px;
-  background: #f1dec4;
+  border-radius: 0;
+  background: #ddd0bc;
   aspect-ratio: 4 / 5;
 }
 .product-art img,
@@ -485,18 +485,21 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #677e61;
-  color: #fefbf6;
+  background: #26392f;
+  color: #f4f0e8;
+  border-bottom: 1px solid rgba(244, 240, 232, 0.18);
 }
 .site-header .nav-link {
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   padding: 0.35rem 0;
   border-bottom: 1px solid transparent;
 }
 .site-header .nav-link:hover,
 .site-header .nav-link[aria-current="page"] {
-  border-bottom-color: #fefbf6;
+  border-bottom-color: #e6d6bd;
 }
 .header-icon {
   display: inline-flex;
@@ -517,8 +520,8 @@ img {
   min-width: 18px;
   height: 18px;
   border-radius: 999px;
-  background: #f9b637;
-  color: #3d3c42;
+  background: #c6a464;
+  color: #1f2822;
   font-size: 0.68rem;
   font-weight: 700;
   display: grid;
