@@ -96,7 +96,7 @@ export default async function ProductPage({ params }: { params: Params }) {
         <span aria-hidden="true">/</span>
         <Link href="/shop">Shop</Link>
         <span aria-hidden="true">/</span>
-        <Link href={`/brands/${brand.slug}`}>{brand.name}</Link>
+        <Link href={`#`}>Butterfly</Link>
         <span aria-hidden="true">/</span>
         <span>{product.name}</span>
       </nav>

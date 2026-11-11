@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import "./site.css";
 import { CartProvider } from "@/components/cart/CartProvider";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { StyleConcierge } from "@/components/StyleConcierge";
 import { site } from "@/lib/config";
 
-const inter = Inter({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dm-sans",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const interTight = Inter_Tight({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-inter-tight",
+  variable: "--font-cormorant",
   display: "swap",
-  weight: ["500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -57,7 +59,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN" className={`${inter.variable} ${interTight.variable}`}>
+    <html lang="en-IN" className={`${dmSans.variable} ${cormorant.variable}`}>
       <body>
         <a className="skip-link" href="#main">
           Skip to content
@@ -66,6 +68,7 @@ export default function RootLayout({
           <SiteHeader />
           <main id="main">{children}</main>
           <SiteFooter />
+          <StyleConcierge />
         </CartProvider>
       </body>
     </html>
