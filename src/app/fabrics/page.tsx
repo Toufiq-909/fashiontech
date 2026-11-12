@@ -138,8 +138,8 @@ export default function FabricsPage() {
                 us build an everyday wardrobe that asks less of you — and of the planet.
               </p>
               <p className="mt-3 max-w-[56ch] text-[0.92rem]">
-                We do not claim every partner is perfect. We do require the main fibre to be Merino or
-                Lyocell, we show the exact blend, and we credit the brand that made the piece.
+                We require the main fibre to be Merino or Lyocell, we show the exact blend on every
+                product page, and every piece is made under the Butterfly Original label.
               </p>
             </div>
             <div className="fabric-swatch" style={{ background: "#73976A", minHeight: 180 }}>
@@ -159,7 +159,7 @@ export default function FabricsPage() {
           <div className="notice notice-plum">
             <strong>Price transparency.</strong> Merino sits in our ₹{tierConfig["luxury-comfort"].min}–₹{tierConfig["luxury-comfort"].max}
             {" "}guide and Lyocell in ₹{tierConfig["everyday-value"].min}–₹{tierConfig["everyday-value"].max} for
-            Butterfly Originals. Partner brands set their own INR prices; we show them as they are.
+            Butterfly Originals. The guide is a directional range, not a hard cap on every piece.
           </div>
         </div>
         <div className="cta-row mt-6">

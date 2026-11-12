@@ -147,7 +147,7 @@ export function ProductBuyBox({
 
       
 
-      {product.tryOnEligible ? (
+      {/* {product.tryOnEligible ? (
         <div className="product-tryon">
           <strong>See it on you.</strong> This garment image is cleared for virtual try-on.{" "}
           <Link className="link-under" href={`/try-on?product=${product.slug}`}>
@@ -159,9 +159,9 @@ export function ProductBuyBox({
           Virtual try-on is hidden for this piece because the brand has not supplied a garment image
           cleared for that use.
         </p>
-      )}
+      )} */}
 
-      {product.customisable && (
+      {/* {product.customisable && (
         <div className="notice notice-plum mt-3">
           <strong>Butterfly Original.</strong> This blank can be personalised in{" "}
           <Link className="link-under" href={`/design?product=${product.slug}`}>
@@ -169,7 +169,7 @@ export function ProductBuyBox({
           </Link>
           .
         </div>
-      )}
+      )} */}
     </div>
   );
 }

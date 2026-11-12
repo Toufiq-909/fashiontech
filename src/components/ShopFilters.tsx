@@ -22,7 +22,7 @@ export function ShopFilters({
   resultCount: number;
 }) {
   const [open, setOpen] = useState(false);
-  const selectedCount = ["category", "fabric", "brand", "tier", "size", "colour", "care", "q"].filter(
+  const selectedCount = ["category", "fabric", "brand", "tier", "size", "colour", "care", "pick", "q"].filter(
     (key) => Boolean(current[key as keyof Filters]),
   ).length;
 
@@ -47,8 +47,6 @@ export function ShopFilters({
           <h2>Filter the catalogue</h2>
           <span className="micro muted">{resultCount} pieces</span>
         </div>
-
-        {current.pick === "1" && <input type="hidden" name="pick" value="1" />}
 
         <div className="filter-group">
           <label className="filter-group-label" htmlFor="filter-q">
@@ -175,7 +173,7 @@ export function ShopFilters({
           <button className="btn btn-sm" type="submit">
             Apply filters
           </button>
-          <Link className="filter-reset" href={current.pick === "1" ? "/shop?pick=1" : "/shop"}>
+          <Link className="filter-reset" href="/shop">
             Clear all
           </Link>
         </div>

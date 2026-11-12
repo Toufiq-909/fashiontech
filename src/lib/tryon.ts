@@ -1,5 +1,6 @@
 import "server-only";
 import type { Product } from "@/lib/types";
+import { generateIdmVton } from "@/lib/tryon-vton";
 
 export interface TryOnResult {
   mode: "image" | "overlay";
@@ -10,10 +11,10 @@ export interface TryOnResult {
 }
 
 /**
- * tryOn service interface. When TRYON_API_URL and TRYON_API_KEY are set, the
- * request is forwarded to the configured virtual try-on provider. The provider
- * contract is documented in the README. Without keys, the client falls back to
- * a 2D garment overlay so the flow still works locally.
+ * tryOn service interface. The request first goes to the Hugging Face IDM-VTON
+ * Space (yisol/IDM-VTON), which renders the garment onto the shopper's photo.
+ * When the Space is unreachable, rate-limited or out of quota, the flow falls
+ * back to a 2D garment overlay so the experience still works locally.
  */
 export async function generateTryOn(input: {
   photo: string;
@@ -29,52 +30,39 @@ export async function generateTryOn(input: {
     ? image.url
     : `${input.origin}${image.url}${image.url.includes("?") ? "&" : "?"}transparent=1&colour=${encodeURIComponent(input.colourHex)}`;
 
-  const url = process.env.TRYON_API_URL;
-  const key = process.env.TRYON_API_KEY;
-  if (!url || !key) {
-    return {
-      mode: "overlay",
-      provider: "local-overlay",
-      garmentImage,
-      notice:
-        "No try-on model key is configured, so this is a client-side 2D overlay preview, not an AI render. Add TRYON_API_URL and TRYON_API_KEY to enable the model.",
-    };
+  // IDM-VTON works from a real garment photograph, not our SVG mockup.
+  const garmentPhoto = input.product.images.find(
+    (entry) => entry.url && !entry.url.startsWith("/api/garment"),
+  );
+  if (garmentPhoto?.url) {
+    try {
+      const fabricLabel = input.product.fabric === "merino" ? "merino wool" : "lyocell";
+      const rendered = await generateIdmVton({
+        photoDataUrl: input.photo,
+        garmentImagePath: garmentPhoto.url,
+        description: `A ${input.colourHex} ${fabricLabel} ${input.product.category.replace("-", " ")}`,
+      });
+      return {
+        mode: "image",
+        provider: "idm-vton-hf",
+        image: rendered,
+        garmentImage,
+        notice:
+          "AI render generated with the open IDM-VTON model on Hugging Face. For this session only — it is not stored unless you save the look.",
+      };
+    } catch (error) {
+      console.error(
+        "IDM-VTON Space failed, falling back to 2D overlay:",
+        error instanceof Error ? error.message : error,
+      );
+    }
   }
-
-  const response = await fetch(url, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${key}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      image: input.photo,
-      garment_image_url: garmentImage,
-      category: input.product.category,
-      colour: input.colourHex,
-      preserve_background: true,
-    }),
-  });
-
-  if (!response.ok) {
-    console.error("Try-on provider failed", response.status, (await response.text()).slice(0, 400));
-    throw new Error("TRYON_PROVIDER_ERROR");
-  }
-
-  const payload = (await response.json()) as {
-    image?: string;
-    image_url?: string;
-    output?: string[];
-    provider?: string;
-  };
-  const rendered = payload.image ?? payload.image_url ?? payload.output?.[0];
-  if (!rendered) throw new Error("TRYON_PROVIDER_EMPTY");
 
   return {
-    mode: "image",
-    provider: payload.provider ?? "configured-provider",
-    image: rendered,
+    mode: "overlay",
+    provider: "local-overlay",
     garmentImage,
-    notice: "Preview generated for this session. It is not stored unless you save the look.",
+    notice:
+      "The AI try-on model is busy or unavailable right now, so this is a client-side 2D overlay preview, not an AI render. Try again in a minute for the AI render.",
   };
 }

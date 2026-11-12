@@ -12,8 +12,8 @@ export function SiteFooter() {
             <p className="footer-wordmark">butterfly</p>
             <p className="footer-tagline">Live to Love</p>
             <p className="footer-note">
-              Merino and Lyocell clothing curated for people who would rather move than adjust what
-              they are wearing.
+              Merino and Lyocell clothing made under our own label, for people who would rather move
+              than adjust what they are wearing.
             </p>
             <a
               href="https://www.instagram.com/"
@@ -63,9 +63,8 @@ export function SiteFooter() {
         <div className="footer-legal">
           <p>{affiliateDisclosure}</p>
           <p>
-            All products are designed and manufactured by the brand named on the product. Butterfly
-            curates, presents and sells these pieces; it does not claim them as its own. Butterfly
-            Originals is our own label, made with a manufacturing partner in India.
+            Every listing on this site is a Butterfly Original piece: designed by Butterfly and made
+            with our manufacturing partner in India. Butterfly takes your order, payment and returns.
           </p>
           <p className="footer-fine">© {new Date().getFullYear()} Butterfly · Bengaluru, India</p>
         </div>

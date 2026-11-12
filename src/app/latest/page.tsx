@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Latest work — new arrivals",
   description:
-    "The newest Merino and Lyocell pieces on Butterfly's rail, synced from partner feeds and picked by our team.",
+    "The newest Merino and Lyocell pieces on Butterfly's rail, picked by our team.",
   alternates: { canonical: "/latest" },
 };
 
@@ -21,7 +21,6 @@ export default function LatestPage() {
   const gallery = [...newItems, ...fallback].slice(0, 12);
   const picks = butterflyPicks(4);
   const drops = [...new Set(gallery.map((product) => product.lastSyncedAt))].slice(0, 4);
-  const partnerCount = new Set(gallery.map((product) => product.brandId)).size;
 
   return (
     <>
@@ -39,7 +38,7 @@ export default function LatestPage() {
           <div>
             <p className="lede">
               Every arrival is checked for fibre content before it goes live. If the composition
-              isn&apos;t on the brand&apos;s own product page, it doesn&apos;t get a{" "}
+              isn&apos;t in our tech pack, it doesn&apos;t get a{" "}
               <span className="badge badge-verified">Fabric verified</span> badge.
             </p>
             <div className="cta-row mt-4">
@@ -56,9 +55,9 @@ export default function LatestPage() {
 
       <section className="section-tight shell">
         <div className="notice notice-peach mb-6">
-          <strong>{newItems.length} marked new</strong> across {partnerCount} brands in this window. New
-          arrivals sync automatically from permitted product feeds; our admin can pin a piece to the
-          front of the rail. Sold-out and unverified imports stay hidden.
+          <strong>{newItems.length} marked new</strong> on the Butterfly rail. New arrivals go live as
+          each piece passes our fabric check; our admin can pin a piece to the front of the rail.
+          Sold-out and unverified imports stay hidden.
         </div>
 
         <div className="product-grid">

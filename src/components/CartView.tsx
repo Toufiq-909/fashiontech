@@ -95,11 +95,11 @@ export function CartView() {
                   Remove
                 </button>
               </div>
-              <p className="micro muted mt-2">
+              {/* <p className="micro muted mt-2">
                 {line.fulfilment === "order-via-butterfly"
                   ? "Order via Butterfly · we forward it to the brand"
                   : "Buy at brand"}
-              </p>
+              </p> */}
             </div>
             <div className="cart-line-right">
               <span>{formatINR(line.unitPrice * line.qty)}</span>

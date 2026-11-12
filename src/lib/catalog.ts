@@ -23,12 +23,11 @@ export function approvedProducts() {
 }
 
 /**
- * The shoppable catalogue. Butterfly Original concepts remain approved for the
- * try-on and design studios, but have no real photography, so they are kept out
- * of retail listings until a shoot exists.
+ * The shoppable catalogue. Every listing on the site is a Butterfly product —
+ * anything not attributed to the Butterfly own label stays out of retail listings.
  */
 export function retailProducts() {
-  return approvedProducts().filter((product) => product.brandId !== "brand-butterfly-original");
+  return approvedProducts().filter((product) => product.brandId === "brand-butterfly-original");
 }
 
 export function productBySlug(slug: string) {
@@ -41,10 +40,6 @@ export function productById(id: string) {
 
 export function productsForBrand(brandId: string) {
   return retailProducts().filter((product) => product.brandId === brandId);
-}
-
-export function featuredBrands() {
-  return brands().filter((brand) => brand.kind === "partner" && brand.featured);
 }
 
 export function butterflyPicks(limit = 4) {
@@ -136,6 +131,5 @@ export function productRating(productId: string) {
 export function styleWith(product: Product) {
   return product.styleWith
     .map((slug) => productBySlug(slug))
-    .filter((item): item is Product => Boolean(item))
-    .filter((item) => item.brandId !== "brand-butterfly-original");
+    .filter((item): item is Product => Boolean(item));
 }

@@ -27,6 +27,7 @@ export default async function TryOnPage({ searchParams }: { searchParams: Search
       sizes: product.sizes,
       colours: product.colours,
       imageUrl: product.images.find((image) => image.allowedForTryOn)?.url ?? null,
+      photoUrl: product.images.find((image) => image.url && !image.url.startsWith("/api/garment"))?.url ?? null,
       brandName: brandById(product.brandId)?.name ?? "Butterfly Original",
     }));
 

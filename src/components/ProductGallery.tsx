@@ -36,7 +36,7 @@ export function ProductGallery({ product }: { product: Product }) {
         )}
       </div>
 
-      {isOwned ? (
+      {/* {isOwned ? (
         <div className="gallery-strip" role="group" aria-label="Colour views">
           {product.colours.slice(0, 4).map((entry, position) => (
             <button
@@ -80,14 +80,14 @@ export function ProductGallery({ product }: { product: Product }) {
             </button>
           ))}
         </div>
-      )}
+      )} */}
 
-      <p className="micro muted mt-2">
+      {/* <p className="micro muted mt-2">
         {image?.credit ?? "Illustrated placeholder"}.
         {isReference
           ? " Official brand image; other colourways may differ. "
           : " Product colours may vary slightly between screens; the brand's own photography is the final reference."}
-      </p>
+      </p> */}
     </div>
   );
 }

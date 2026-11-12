@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-11-08T06:00:00.000Z",
-  "note": "Butterfly's own label, made with our manufacturing partner in India. Garment mockups are our own artwork, so these are the pieces cleared for virtual try-on and customisation.",
+  "note": "Butterfly's own label, made with our manufacturing partner in India. The range covers our own designs and pieces developed under the Butterfly label, so every listing on the site is a Butterfly product. Garment mockups are our own artwork; those pieces are cleared for virtual try-on and customisation.",
   "feeds": [
     {
       "feedId": "feed-butterfly-originals",
@@ -21,14 +21,33 @@
           "gsm": 180,
           "price": 4200,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Oat", "hex": "#D9C9AD" },
-            { "name": "Forest", "hex": "#677E61" },
-            { "name": "Ink", "hex": "#3D3C42" },
-            { "name": "Teal Tide", "hex": "#3C6E71" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/everyday-merino-tee",
+          "colours": [
+            {
+              "name": "Oat",
+              "hex": "#D9C9AD"
+            },
+            {
+              "name": "Forest",
+              "hex": "#677E61"
+            },
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            },
+            {
+              "name": "Teal Tide",
+              "hex": "#3C6E71"
+            }
+          ],
+          "imageUrl": "/images/products/everyday-merino-tee.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/everyday-merino-tee",
           "availability": "in-stock",
@@ -37,7 +56,8 @@
           "care": "Machine wash cool on wool cycle. Reshape and dry flat.",
           "isNew": true,
           "easyCare": true,
-          "customisable": true
+          "customisable": true,
+          "mockupUrl": "/api/garment/everyday-merino-tee"
         },
         {
           "sku": "BFL-OR-MSHIRT",
@@ -50,13 +70,29 @@
           "gsm": 160,
           "price": 4500,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Cream", "hex": "#FEFBF6" },
-            { "name": "Sky", "hex": "#A6D1E6" },
-            { "name": "Plum", "hex": "#7F5283" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/relaxed-merino-shirt",
+          "colours": [
+            {
+              "name": "Cream",
+              "hex": "#FEFBF6"
+            },
+            {
+              "name": "Sky",
+              "hex": "#A6D1E6"
+            },
+            {
+              "name": "Plum",
+              "hex": "#7F5283"
+            }
+          ],
+          "imageUrl": "/images/products/relaxed-merino-shirt.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/relaxed-merino-shirt",
           "availability": "in-stock",
@@ -65,7 +101,8 @@
           "care": "Machine wash cool on wool cycle. Warm iron on reverse if needed.",
           "isNew": true,
           "easyCare": true,
-          "customisable": true
+          "customisable": true,
+          "mockupUrl": "/api/garment/relaxed-merino-shirt"
         },
         {
           "sku": "BFL-OR-MHOOD",
@@ -78,13 +115,29 @@
           "gsm": 280,
           "price": 4500,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Ink", "hex": "#3D3C42" },
-            { "name": "Forest", "hex": "#677E61" },
-            { "name": "Oat", "hex": "#D9C9AD" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/merino-hoodie",
+          "colours": [
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            },
+            {
+              "name": "Forest",
+              "hex": "#677E61"
+            },
+            {
+              "name": "Oat",
+              "hex": "#D9C9AD"
+            }
+          ],
+          "imageUrl": "/images/products/merino-hoodie.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/merino-hoodie",
           "availability": "in-stock",
@@ -93,7 +146,8 @@
           "care": "Machine wash cool on wool cycle. Dry flat, away from direct heat.",
           "isNew": true,
           "easyCare": true,
-          "customisable": true
+          "customisable": true,
+          "mockupUrl": "/api/garment/merino-hoodie"
         },
         {
           "sku": "BFL-OR-MJOG",
@@ -106,13 +160,29 @@
           "gsm": 240,
           "price": 4400,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Ink", "hex": "#3D3C42" },
-            { "name": "Sage", "hex": "#73976A" },
-            { "name": "Sand", "hex": "#F1DEC4" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/merino-joggers",
+          "colours": [
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            },
+            {
+              "name": "Sage",
+              "hex": "#73976A"
+            },
+            {
+              "name": "Sand",
+              "hex": "#F1DEC4"
+            }
+          ],
+          "imageUrl": "/images/products/merino-joggers.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/merino-joggers",
           "availability": "in-stock",
@@ -121,7 +191,8 @@
           "care": "Machine wash cool on wool cycle. Dry flat.",
           "isNew": false,
           "easyCare": true,
-          "customisable": false
+          "customisable": false,
+          "mockupUrl": "/api/garment/merino-joggers"
         },
         {
           "sku": "BFL-OR-LTEE",
@@ -134,13 +205,29 @@
           "gsm": 160,
           "price": 550,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Dusty Pink", "hex": "#D9A9A0" },
-            { "name": "Steel Blue", "hex": "#7E93A6" },
-            { "name": "Cream", "hex": "#FEFBF6" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/everyday-lyocell-tee",
+          "colours": [
+            {
+              "name": "Dusty Pink",
+              "hex": "#D9A9A0"
+            },
+            {
+              "name": "Steel Blue",
+              "hex": "#7E93A6"
+            },
+            {
+              "name": "Cream",
+              "hex": "#FEFBF6"
+            }
+          ],
+          "imageUrl": "/images/products/everyday-lyocell-tee.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/everyday-lyocell-tee",
           "availability": "in-stock",
@@ -149,7 +236,8 @@
           "care": "Machine wash cool, gentle cycle. Line dry in shade.",
           "isNew": true,
           "easyCare": true,
-          "customisable": true
+          "customisable": true,
+          "mockupUrl": "/api/garment/everyday-lyocell-tee"
         },
         {
           "sku": "BFL-OR-LSHIRT",
@@ -162,13 +250,29 @@
           "gsm": 140,
           "price": 600,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Cream", "hex": "#FEFBF6" },
-            { "name": "Sky", "hex": "#A6D1E6" },
-            { "name": "Sage", "hex": "#73976A" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/oversized-lyocell-shirt",
+          "colours": [
+            {
+              "name": "Cream",
+              "hex": "#FEFBF6"
+            },
+            {
+              "name": "Sky",
+              "hex": "#A6D1E6"
+            },
+            {
+              "name": "Sage",
+              "hex": "#73976A"
+            }
+          ],
+          "imageUrl": "/images/products/oversized-lyocell-shirt.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/oversized-lyocell-shirt",
           "availability": "in-stock",
@@ -177,7 +281,8 @@
           "care": "Machine wash cool, gentle cycle. Warm iron if needed.",
           "isNew": false,
           "easyCare": true,
-          "customisable": true
+          "customisable": true,
+          "mockupUrl": "/api/garment/oversized-lyocell-shirt"
         },
         {
           "sku": "BFL-OR-LHOOD",
@@ -190,13 +295,29 @@
           "gsm": 260,
           "price": 600,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Sand", "hex": "#F1DEC4" },
-            { "name": "Ink", "hex": "#3D3C42" },
-            { "name": "Plum", "hex": "#7F5283" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/lyocell-hoodie",
+          "colours": [
+            {
+              "name": "Sand",
+              "hex": "#F1DEC4"
+            },
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            },
+            {
+              "name": "Plum",
+              "hex": "#7F5283"
+            }
+          ],
+          "imageUrl": "/images/products/lyocell-hoodie.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/lyocell-hoodie",
           "availability": "in-stock",
@@ -205,7 +326,8 @@
           "care": "Machine wash cool, gentle cycle. Line dry.",
           "isNew": true,
           "easyCare": true,
-          "customisable": true
+          "customisable": true,
+          "mockupUrl": "/api/garment/lyocell-hoodie"
         },
         {
           "sku": "BFL-OR-LJOG",
@@ -218,13 +340,29 @@
           "gsm": 220,
           "price": 600,
           "currency": "INR",
-          "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-          "colours": [
-            { "name": "Ink", "hex": "#3D3C42" },
-            { "name": "Sage", "hex": "#73976A" },
-            { "name": "Sand", "hex": "#F1DEC4" }
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
           ],
-          "imageUrl": "/api/garment/lyocell-joggers",
+          "colours": [
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            },
+            {
+              "name": "Sage",
+              "hex": "#73976A"
+            },
+            {
+              "name": "Sand",
+              "hex": "#F1DEC4"
+            }
+          ],
+          "imageUrl": "/images/products/lyocell-joggers.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/lyocell-joggers",
           "availability": "in-stock",
@@ -233,7 +371,8 @@
           "care": "Machine wash cool. Line dry.",
           "isNew": false,
           "easyCare": true,
-          "customisable": false
+          "customisable": false,
+          "mockupUrl": "/api/garment/lyocell-joggers"
         },
         {
           "sku": "BFL-OR-LSOCK",
@@ -245,12 +384,21 @@
           "compositionSource": "butterfly-tech-pack",
           "price": 500,
           "currency": "INR",
-          "sizes": ["S/M", "L/XL"],
-          "colours": [
-            { "name": "Cream", "hex": "#FEFBF6" },
-            { "name": "Forest", "hex": "#677E61" }
+          "sizes": [
+            "S/M",
+            "L/XL"
           ],
-          "imageUrl": "/api/garment/lyocell-rib-socks-2-pairs",
+          "colours": [
+            {
+              "name": "Cream",
+              "hex": "#FEFBF6"
+            },
+            {
+              "name": "Forest",
+              "hex": "#677E61"
+            }
+          ],
+          "imageUrl": "/images/products/lyocell-rib-socks-2-pairs.jpg",
           "imagePermission": true,
           "sourceUrl": "/shop/lyocell-rib-socks",
           "availability": "in-stock",
@@ -259,7 +407,1134 @@
           "care": "Machine wash cool. Tumble dry low.",
           "isNew": false,
           "easyCare": true,
+          "customisable": false,
+          "mockupUrl": "/api/garment/lyocell-rib-socks-2-pairs"
+        },
+        {
+          "sku": "BFL-OR-LWPT",
+          "name": "Everyday Lyocell Wide-Leg Pants",
+          "category": "pants",
+          "fabric": "lyocell",
+          "composition": "100% Lyocell, 160 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "currency": "INR",
+          "imagePermission": true,
+          "gsm": 160,
+          "price": 600,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Sky",
+              "hex": "#A6D1E6"
+            },
+            {
+              "name": "Sand",
+              "hex": "#F1DEC4"
+            },
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            }
+          ],
+          "imageUrl": "/images/products/everyday-lyocell-wide-leg-pants.jpg",
+          "mockupUrl": "/api/garment/everyday-lyocell-wide-leg-pants",
+          "sourceUrl": "/shop/everyday-lyocell-wide-leg-pants",
+          "availability": "in-stock",
+          "description": "Wide-leg pants with a fluid drape and a high, comfortable waist. Cool against skin, deep pockets, and no stiff seams to fight.",
+          "fit": "High-rise, wide leg",
+          "care": "Machine wash cool, gentle cycle. Line dry in shade, warm iron if needed.",
+          "isNew": true,
+          "easyCare": true,
           "customisable": false
+        },
+        {
+          "sku": "BFL-OR-MTRW",
+          "name": "Merino Relaxed Trousers",
+          "category": "pants",
+          "fabric": "merino",
+          "composition": "100% Merino wool, 240 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "currency": "INR",
+          "imagePermission": true,
+          "gsm": 240,
+          "price": 4400,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            },
+            {
+              "name": "Oat",
+              "hex": "#D9C9AD"
+            },
+            {
+              "name": "Forest",
+              "hex": "#677E61"
+            }
+          ],
+          "imageUrl": "/images/products/merino-relaxed-trousers.jpg",
+          "mockupUrl": "/api/garment/merino-relaxed-trousers",
+          "sourceUrl": "/shop/merino-relaxed-trousers",
+          "availability": "low-stock",
+          "description": "Relaxed trousers in fine Merino with a straight leg and a flat front. No prickle, no sag — they hold their shape through long days and longer commutes.",
+          "fit": "Mid-rise, straight leg",
+          "care": "Machine wash cool on wool cycle. Dry flat, away from direct heat.",
+          "isNew": true,
+          "easyCare": true,
+          "customisable": true
+        },
+        {
+          "sku": "BFL-OR-MZIP",
+          "name": "Merino Zip Hoodie",
+          "category": "hoodies",
+          "fabric": "merino",
+          "composition": "100% Merino wool, 300 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "currency": "INR",
+          "imagePermission": true,
+          "gsm": 300,
+          "price": 4500,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Ember",
+              "hex": "#E73F1E"
+            },
+            {
+              "name": "Ink",
+              "hex": "#3D3C42"
+            },
+            {
+              "name": "Forest",
+              "hex": "#677E61"
+            }
+          ],
+          "imageUrl": "/images/products/merino-zip-hoodie.jpg",
+          "mockupUrl": "/api/garment/merino-zip-hoodie",
+          "sourceUrl": "/shop/merino-zip-hoodie",
+          "availability": "in-stock",
+          "description": "A full-zip hoodie in a heavy 300 gsm Merino knit. Wear it open over a tee on campus, zip it against the evening wind — warm without the plastic feel of fleece.",
+          "fit": "Regular, slightly boxy",
+          "care": "Machine wash cool on wool cycle. Dry flat, away from direct heat.",
+          "isNew": true,
+          "easyCare": true,
+          "customisable": true
+        },
+        {
+          "sku": "BFL-OR-LLOJ",
+          "name": "Lyocell Lounge Joggers",
+          "category": "joggers",
+          "fabric": "lyocell",
+          "composition": "100% Lyocell, 220 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "currency": "INR",
+          "imagePermission": true,
+          "gsm": 220,
+          "price": 550,
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Dusty Pink",
+              "hex": "#D9A9A0"
+            },
+            {
+              "name": "Sage",
+              "hex": "#73976A"
+            },
+            {
+              "name": "Cream",
+              "hex": "#FEFBF6"
+            }
+          ],
+          "imageUrl": "/images/products/lyocell-lounge-joggers.jpg",
+          "sourceUrl": "/shop/lyocell-lounge-joggers",
+          "availability": "in-stock",
+          "description": "Soft lounge joggers with a wide waistband and tapered cuffs. Cool, drapey and quiet — for rest days, study nights and long train rides.",
+          "fit": "Relaxed, tapered cuff",
+          "care": "Machine wash cool, gentle cycle. Line dry in shade, warm iron if needed.",
+          "isNew": false,
+          "easyCare": true,
+          "customisable": false
+        },
+        {
+          "sku": "BFL-OR-LSCF",
+          "name": "Everyday Lyocell Scarf",
+          "category": "accessories",
+          "fabric": "lyocell",
+          "composition": "100% Lyocell, chunky knit",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "currency": "INR",
+          "imagePermission": true,
+          "price": 550,
+          "sizes": [
+            "One size"
+          ],
+          "colours": [
+            {
+              "name": "Sand",
+              "hex": "#F1DEC4"
+            },
+            {
+              "name": "Plum",
+              "hex": "#7F5283"
+            },
+            {
+              "name": "Sage",
+              "hex": "#73976A"
+            }
+          ],
+          "imageUrl": "/images/products/everyday-lyocell-scarf.jpg",
+          "sourceUrl": "/shop/everyday-lyocell-scarf",
+          "availability": "in-stock",
+          "description": "A chunky-knit Lyocell scarf that stays cool in transit and warms up when you wrap it double. Long enough to loop twice, soft enough to forget you are wearing it.",
+          "fit": "One size, approx 180 x 35 cm",
+          "care": "Machine wash cool, gentle cycle. Line dry in shade, warm iron if needed.",
+          "isNew": false,
+          "easyCare": true,
+          "customisable": false
+        },
+        {
+          "sku": "UM-ACTIVE-TEE",
+          "name": "Active Merino T-Shirt",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 145 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 145,
+          "price": 8624,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#1E1E1E"
+            }
+          ],
+          "imageUrl": "/images/products/um-active-tee.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/active-merino-t-shirt",
+          "availability": "in-stock",
+          "description": "A Woolmark-certified merino jersey tee with a 'Me Cool' finish, built for travel and daily wear.",
+          "fit": "Regular fit, straight hem",
+          "care": "Machine wash cool on wool cycle. Dry flat. Air between wears.",
+          "isNew": true,
+          "easyCare": true
+        },
+        {
+          "sku": "UM-SLEEP-CREW",
+          "name": "Ultrafine Merino Sleep Crew",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 165 gsm (15.5 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 165,
+          "price": 7744,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Heather Grey",
+              "hex": "#9A9A96"
+            }
+          ],
+          "imageUrl": "/images/products/um-sleep-crew.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/ultrafine-merino-sleep-crew",
+          "availability": "in-stock",
+          "description": "A soft 15.5 micron merino crew in a jersey knit, made for sleeping and long-haul travel.",
+          "fit": "Relaxed, long sleeve",
+          "care": "Machine wash cool on wool cycle. Dry flat.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "WP-100-CREW",
+          "name": "100% Wool Crew Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 190 gsm (18.9 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 190,
+          "price": 7920,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#232323"
+            },
+            {
+              "name": "Washed Navy",
+              "hex": "#2F3B4C"
+            },
+            {
+              "name": "Hunter Green",
+              "hex": "#3C5442"
+            },
+            {
+              "name": "Cedarwood",
+              "hex": "#986C54"
+            },
+            {
+              "name": "Ocean Teal",
+              "hex": "#3C6E71"
+            },
+            {
+              "name": "Lavender",
+              "hex": "#B7A6C8"
+            },
+            {
+              "name": "Light Blue",
+              "hex": "#9BB7CE"
+            }
+          ],
+          "imageUrl": "/images/products/wp-100-crew.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/100-wool-crew-neck-tee",
+          "availability": "in-stock",
+          "description": "An interlock-knit 100% merino crew, the piece the brand's 100-day experiment started with.",
+          "fit": "Regular fit, crew neck",
+          "care": "Machine wash cold, tumble dry low. No ironing needed.",
+          "isNew": true,
+          "easyCare": true
+        },
+        {
+          "sku": "WP-SIGNATURE-CREW",
+          "name": "Signature Crew Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "78% merino wool, 22% nylon, 160 gsm",
+          "compositionPercent": 78,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 160,
+          "price": 7980,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Natural White",
+              "hex": "#EFEBE3"
+            }
+          ],
+          "imageUrl": "/images/products/wp-signature-crew.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/signature-crew-neck-tee",
+          "availability": "low-stock",
+          "description": "The lighter 160 gsm signature knit, with a 17.5 micron merino core and nylon for durability.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold. Tumble dry low.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "WC-EVERYDAY-CREW",
+          "name": "Everyday Crew Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% Australian merino wool, 175 gsm (17.5 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 175,
+          "price": 7392,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#1C1C1C"
+            },
+            {
+              "name": "Charcoal",
+              "hex": "#4A4A4A"
+            },
+            {
+              "name": "Fir",
+              "hex": "#4A5C46"
+            },
+            {
+              "name": "Loch",
+              "hex": "#4B6470"
+            },
+            {
+              "name": "Salmon",
+              "hex": "#D98C7A"
+            }
+          ],
+          "imageUrl": "/images/products/wc-everyday-crew.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/everyday-crew-tee",
+          "availability": "in-stock",
+          "description": "Woolmark-certified Australian merino in a plain crew, at a price below most travel-wear merino.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, dry flat.",
+          "isNew": true,
+          "easyCare": true
+        },
+        {
+          "sku": "WC-POLO",
+          "name": "The Polo",
+          "category": "shirts",
+          "fabric": "merino",
+          "composition": "100% Australian merino wool, 175 gsm (17.5 micron)",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 175,
+          "price": 7392,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#1C1C1C"
+            },
+            {
+              "name": "Silt",
+              "hex": "#A99B8A"
+            },
+            {
+              "name": "Fir",
+              "hex": "#4A5C46"
+            },
+            {
+              "name": "Loch",
+              "hex": "#4B6470"
+            }
+          ],
+          "imageUrl": "/images/products/wc-polo.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/the-polo",
+          "availability": "in-stock",
+          "description": "A pure-merino polo with a soft collar — the easiest way into wool without wearing a sweater.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, dry flat.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "WC-VNECK-W",
+          "name": "Women's V Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "95% Australian merino wool, 5% elastane, 175 gsm",
+          "compositionPercent": 95,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 175,
+          "price": 7392,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Plum",
+              "hex": "#7F5283"
+            },
+            {
+              "name": "Fog",
+              "hex": "#C9C7C1"
+            },
+            {
+              "name": "Tannin",
+              "hex": "#8A6A4F"
+            },
+            {
+              "name": "Charcoal",
+              "hex": "#4A4A4A"
+            }
+          ],
+          "imageUrl": "/images/products/wc-vneck-w.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/womens-v-neck-tee",
+          "availability": "in-stock",
+          "description": "A merino V-neck with a little stretch, cut for everyday layering.",
+          "fit": "Slim-regular, V neck",
+          "care": "Machine wash cold, dry flat.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "MC-111-LS",
+          "name": "#111 Long Sleeve Crew Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% Australian merino wool, 175 gsm",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 175,
+          "price": 7695,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Black",
+              "hex": "#232323"
+            },
+            {
+              "name": "Latte",
+              "hex": "#C4B29B"
+            },
+            {
+              "name": "Olive",
+              "hex": "#6E7256"
+            },
+            {
+              "name": "Navy",
+              "hex": "#2C3A4C"
+            },
+            {
+              "name": "Burgundy",
+              "hex": "#6E2F35"
+            },
+            {
+              "name": "Light Grey Marle",
+              "hex": "#C3C2BE"
+            },
+            {
+              "name": "Charcoal",
+              "hex": "#4A4A4A"
+            }
+          ],
+          "imageUrl": "/images/products/mc-111-ls.png",
+          "imagePermission": true,
+          "sourceUrl": "/shop/111-long-sleeve-crew-neck-tee",
+          "availability": "in-stock",
+          "description": "A lightweight 175 gsm single-knit merino long sleeve, made in Queensland from Australian wool.",
+          "fit": "Unisex, regular fit",
+          "care": "Warm machine wash, dry flat in shade.",
+          "isNew": true,
+          "easyCare": true
+        },
+        {
+          "sku": "MC-121L-SCOOP",
+          "name": "#121L Long Sleeve Scoop Neck Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 175 gsm single knit jersey",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 175,
+          "price": 7695,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "3XL"
+          ],
+          "colours": [
+            {
+              "name": "Teal",
+              "hex": "#2F6B6B"
+            },
+            {
+              "name": "Chilli Red",
+              "hex": "#B3402F"
+            },
+            {
+              "name": "Latte",
+              "hex": "#C4B29B"
+            },
+            {
+              "name": "Jacaranda Blue",
+              "hex": "#7C88C2"
+            },
+            {
+              "name": "Navy",
+              "hex": "#2C3A4C"
+            }
+          ],
+          "imageUrl": "/images/products/mc-121l-scoop.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/121l-long-sleeve-scoop-neck-tee",
+          "availability": "in-stock",
+          "description": "A soft scoop-neck merino layer with no elastane, cut long in the body.",
+          "fit": "Relaxed, scoop neck",
+          "care": "Warm machine wash, dry flat in shade.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "MC-112-RAGLAN",
+          "name": "#112 Long Sleeve Raglan Tee",
+          "category": "t-shirts",
+          "fabric": "merino",
+          "composition": "100% merino wool, 275 gsm double knit jersey",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "gsm": 275,
+          "price": 8265,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "3XL"
+          ],
+          "colours": [
+            {
+              "name": "Chilli Red",
+              "hex": "#B3402F"
+            },
+            {
+              "name": "Jacaranda Blue",
+              "hex": "#7C88C2"
+            },
+            {
+              "name": "Taupe",
+              "hex": "#A79A8B"
+            },
+            {
+              "name": "Natural",
+              "hex": "#E7DFD2"
+            },
+            {
+              "name": "Olive",
+              "hex": "#6E7256"
+            }
+          ],
+          "imageUrl": "/images/products/mc-112-raglan.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/112-long-sleeve-raglan-tee",
+          "availability": "low-stock",
+          "description": "A heavyweight 275 gsm interlock merino raglan for cold classrooms and colder trains.",
+          "fit": "Relaxed, raglan sleeve",
+          "care": "Warm machine wash, dry flat in shade.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "MS-P60723313",
+          "name": "Lyocell Rich Printed Crew Neck Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "85% lyocell, 15% polyamide",
+          "compositionPercent": 85,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 799,
+          "currency": "INR",
+          "sizes": [
+            "UK 6",
+            "UK 8",
+            "UK 10",
+            "UK 12",
+            "UK 14",
+            "UK 16",
+            "UK 18",
+            "UK 20"
+          ],
+          "colours": [
+            {
+              "name": "Print",
+              "hex": "#B9C6C9"
+            }
+          ],
+          "imageUrl": "/images/products/ms-p60723313.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/lyocell-rich-printed-crew-neck-blouse",
+          "availability": "in-stock",
+          "description": "A fluid lyocell-rich blouse with a crew neck and an all-over print. Made for warm days that still need a collar.",
+          "fit": "Regular fit",
+          "care": "Machine washable at 40°C. Warm iron.",
+          "isNew": true,
+          "easyCare": false
+        },
+        {
+          "sku": "MS-P60723342",
+          "name": "Lyocell Rich Textured Bubble Hem Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "72% lyocell, 28% polyamide; lining 100% cotton",
+          "compositionPercent": 72,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 1449,
+          "currency": "INR",
+          "sizes": [
+            "UK 6",
+            "UK 8",
+            "UK 10",
+            "UK 12",
+            "UK 14",
+            "UK 16",
+            "UK 18",
+            "UK 20"
+          ],
+          "colours": [
+            {
+              "name": "Ivory",
+              "hex": "#EFE8DA"
+            }
+          ],
+          "imageUrl": "/images/products/ms-p60723342.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/lyocell-rich-textured-bubble-hem-blouse",
+          "availability": "in-stock",
+          "description": "A textured lyocell blouse with a bubble hem, made in India. Loose through the body, easy over trousers.",
+          "fit": "Relaxed, bubble hem",
+          "care": "Machine washable at 40°C.",
+          "isNew": false,
+          "easyCare": false
+        },
+        {
+          "sku": "MS-P60789287",
+          "name": "Lyocell Rich Embroidered Notch Neck Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "70% lyocell, 30% linen; embroidery threads 100% polyester",
+          "compositionPercent": 70,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 4199,
+          "currency": "INR",
+          "sizes": [
+            "UK 6",
+            "UK 8",
+            "UK 10",
+            "UK 12",
+            "UK 14",
+            "UK 16",
+            "UK 18",
+            "UK 20"
+          ],
+          "colours": [
+            {
+              "name": "Ecru",
+              "hex": "#E9DFCC"
+            }
+          ],
+          "imageUrl": "/images/products/ms-p60789287.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/lyocell-rich-embroidered-notch-neck-blouse",
+          "availability": "low-stock",
+          "description": "A lyocell-linen blouse with a notch neck and tonal embroidery, made in India.",
+          "fit": "Regular fit",
+          "care": "Machine washable at 40°C. Cool iron on reverse.",
+          "isNew": false,
+          "easyCare": false
+        },
+        {
+          "sku": "WS-301086760",
+          "name": "ETA Off-White Striped Relaxed-Fit Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 14% linen, 6% cotton",
+          "compositionPercent": 80,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 1499,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colours": [
+            {
+              "name": "Off-White",
+              "hex": "#F2EBDD"
+            }
+          ],
+          "imageUrl": "/images/products/ws-301086760.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/eta-off-white-striped-relaxed-fit-shirt",
+          "availability": "in-stock",
+          "description": "A relaxed striped shirt in a lyocell-linen blend, cut with room through the body and sleeve.",
+          "fit": "Relaxed fit",
+          "care": "Machine wash cold, line dry.",
+          "isNew": true,
+          "easyCare": true
+        },
+        {
+          "sku": "W-23FEW62400",
+          "name": "Blue Denim Tencel Pleated Pants",
+          "category": "pants",
+          "fabric": "lyocell",
+          "composition": "100% lyocell (Tencel denim)",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 1080,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL",
+            "3XL"
+          ],
+          "colours": [
+            {
+              "name": "Blue Denim",
+              "hex": "#4A6484"
+            }
+          ],
+          "imageUrl": "/images/products/w-23few62400.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/blue-denim-tencel-pleated-pants",
+          "availability": "low-stock",
+          "description": "Wide, pleated Tencel-denim trousers with a soft drape and a high waist.",
+          "fit": "Relaxed, high rise",
+          "care": "Machine wash cold inside out. Line dry.",
+          "isNew": true,
+          "easyCare": false
+        },
+        {
+          "sku": "W-PINTUCK-TUNIC",
+          "name": "Blue Pintuck Denim Tunic",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "100% lyocell",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 1240,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Blue Denim",
+              "hex": "#4A6484"
+            }
+          ],
+          "imageUrl": "/images/products/w-pintuck-tunic.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/blue-pintuck-denim-tunic",
+          "availability": "in-stock",
+          "description": "A longline tunic in Tencel denim, with a mandarin collar, pin-tuck yoke and high-low hem.",
+          "fit": "Straight, below hip",
+          "care": "Machine wash cold. Line dry.",
+          "isNew": false,
+          "easyCare": false
+        },
+        {
+          "sku": "AND-AZURE-LYOCELL",
+          "name": "Azure Blue Lyocell Linen Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 20% linen",
+          "compositionPercent": 80,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 4599,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Azure Blue",
+              "hex": "#6E93B5"
+            }
+          ],
+          "imageUrl": "/images/products/and-azure-lyocell.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/azure-blue-lyocell-linen-shirt",
+          "availability": "in-stock",
+          "description": "An 80% lyocell shirt with linen for texture, cut regular or slim. Made in India.",
+          "fit": "Regular or slim",
+          "care": "Machine wash cold, gentle. Line dry in shade.",
+          "isNew": true,
+          "easyCare": true
+        },
+        {
+          "sku": "AND-CLOUD-LYOCELL",
+          "name": "Cloud White Lyocell Linen Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 20% linen",
+          "compositionPercent": 80,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 4599,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Cloud White",
+              "hex": "#F3EEE5"
+            }
+          ],
+          "imageUrl": "/images/products/and-cloud-lyocell.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/cloud-white-lyocell-linen-shirt",
+          "availability": "low-stock",
+          "description": "The white version of the Lyocell Linen shirt: fluid, light and easy to dress up or down.",
+          "fit": "Regular or slim",
+          "care": "Machine wash cold, gentle. Line dry in shade.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "AND-DRIFT-LYOCELL",
+          "name": "Drift Brown Lyocell Linen Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "80% lyocell, 20% linen",
+          "compositionPercent": 80,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 4599,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Drift Brown",
+              "hex": "#8C6A52"
+            }
+          ],
+          "imageUrl": "/images/products/and-drift-lyocell.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/drift-brown-lyocell-linen-shirt",
+          "availability": "in-stock",
+          "description": "A brown lyocell-linen shirt and one of the brand's best sellers, with a soft collar and single pocket.",
+          "fit": "Regular or slim",
+          "care": "Machine wash cold, gentle. Line dry in shade.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "VIR-XITI-DRESS",
+          "name": "Xiti 100% Lyocell Mini Dress",
+          "category": "other",
+          "fabric": "lyocell",
+          "composition": "100% lyocell",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 899,
+          "currency": "INR",
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colours": [
+            {
+              "name": "Warm Yellow",
+              "hex": "#E6C15C"
+            }
+          ],
+          "imageUrl": "/images/products/vir-xiti-dress.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/xiti-100-lyocell-mini-dress",
+          "availability": "low-stock",
+          "reviewNote": "Dress falls outside our shirts / pants / tees / hoodies categories. Hold for review.",
+          "description": "A square-neck mini dress in warm yellow. Listed as 100% lyocell.",
+          "fit": "Fitted bodice, flared skirt",
+          "care": "Machine wash cold.",
+          "isNew": true,
+          "easyCare": false
+        },
+        {
+          "sku": "CW-M-SHIRT-10521",
+          "name": "Men's Cotton Lyocell Regular Fit Shirt",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "50% cotton, 50% lyocell",
+          "compositionPercent": 50,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 1195,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Blue",
+              "hex": "#56718C"
+            }
+          ],
+          "imageUrl": "/images/products/cw-m-shirt-10521.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/mens-cotton-lyocell-regular-fit-shirt",
+          "availability": "in-stock",
+          "description": "A half-cotton, half-lyocell shirt with the crispness of cotton and the drape of lyocell.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, line dry.",
+          "isNew": false,
+          "easyCare": true
+        },
+        {
+          "sku": "CW-W-BLOUSE-DENIM",
+          "name": "Women's Tencel Sleeveless Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "100% Tencel (lyocell)",
+          "compositionPercent": 100,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 995,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Denim",
+              "hex": "#5C7189"
+            }
+          ],
+          "imageUrl": "/images/products/cw-w-blouse-denim.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/womens-tencel-sleeveless-blouse",
+          "availability": "in-stock",
+          "description": "A sleeveless Tencel blouse with a straight hem, made for layering under an open shirt.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, line dry.",
+          "isNew": true,
+          "easyCare": true
+        },
+        {
+          "sku": "CW-W-BLOUSE-RUST",
+          "name": "Women's Tencel Linen Blouse",
+          "category": "shirts",
+          "fabric": "lyocell",
+          "composition": "60% Tencel (lyocell), 40% linen",
+          "compositionPercent": 60,
+          "compositionSource": "butterfly-tech-pack",
+          "price": 2290,
+          "currency": "INR",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colours": [
+            {
+              "name": "Rust",
+              "hex": "#B05B3C"
+            }
+          ],
+          "imageUrl": "/images/products/cw-w-blouse-rust.webp",
+          "imagePermission": true,
+          "sourceUrl": "/shop/womens-tencel-linen-blouse",
+          "availability": "in-stock",
+          "description": "Tencel with linen for a drier hand-feel, in a rust colour that works with sand and ink.",
+          "fit": "Regular fit",
+          "care": "Machine wash cold, line dry in shade.",
+          "isNew": false,
+          "easyCare": false
         }
       ]
     }

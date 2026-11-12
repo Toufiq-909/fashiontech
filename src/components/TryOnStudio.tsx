@@ -17,6 +17,7 @@ export interface TryOnProduct {
   sizes: string[];
   colours: { name: string; hex: string }[];
   imageUrl: string | null;
+  photoUrl: string | null;
   brandName: string;
 }
 
@@ -392,7 +393,7 @@ export function TryOnStudio({
                   className="w-11 h-14 rounded-md overflow-hidden shrink-0"
                   style={{ background: entry.colours[0]?.hex ?? "#F1DEC4" }}
                 >
-                  {entry.imageUrl && <img src={entry.imageUrl} alt="" className="w-full h-full object-cover" />}
+                  {entry.photoUrl && <img src={entry.photoUrl} alt="" className="w-full h-full object-cover" />}
                 </span>
                 <span className="min-w-0">
                   <span className="block text-[0.83rem] font-semibold leading-tight">{entry.name}</span>
@@ -443,16 +444,18 @@ export function TryOnStudio({
         <button type="button" className="btn btn-block mt-4" onClick={generate} disabled={busy || !photo || !consent}>
           {busy ? (
             <>
-              <span className="loading-line" aria-hidden="true" /> Generating preview…
+              <span className="loading-line" aria-hidden="true" /> Generating with IDM-VTON — usually 1–2 minutes…
             </>
           ) : result ? (
             "Generate again"
           ) : (
-            "Generate preview"
+            "Try it on with AI"
           )}
         </button>
         <p className="hint mt-2">
-          {photo ? "Preview is generated for this session only." : "Upload a photo and confirm consent to begin."}
+          {photo
+            ? "Runs the open-source IDM-VTON model on Hugging Face. The preview is generated for this session only."
+            : "Upload a photo and confirm consent to begin."}
         </p>
       </div>
 
@@ -468,9 +471,9 @@ export function TryOnStudio({
                 </svg>
               </div>
               <strong className="block mb-1">Your preview appears here.</strong>
-              Upload a photo, choose a garment, then generate. If no try-on model key is configured,
-              you will see a 2D garment overlay you can reposition — clearly labelled, never passed off
-              as an AI render.
+              Upload a photo, choose a garment, then generate. The IDM-VTON model on Hugging Face
+              renders the garment onto your body; if the model is busy you will see a 2D garment
+              overlay you can reposition — clearly labelled, never passed off as an AI render.
             </div>
           ) : (
             <div className="studio-stage-inner">
@@ -529,7 +532,7 @@ export function TryOnStudio({
                 ))}
                 <p className="hint mt-2">
                   A 2D overlay is an honest approximation: it will not reshape the garment to your body.
-                  Add a try-on model key for a generated render.
+                  Try again in a minute for the AI render.
                 </p>
               </div>
             )}
@@ -577,6 +580,15 @@ export function TryOnStudio({
                 <button type="button" className="btn btn-secondary btn-sm" onClick={saveLook} disabled={saveBusy}>
                   {saveBusy ? "Saving…" : saved ? "Look saved" : "Save this look"}
                 </button>
+                {result?.mode === "image" && result.image && (
+                  <a
+                    className="btn btn-secondary btn-sm"
+                    href={result.image}
+                    download={`butterfly-tryon-${product?.slug ?? "look"}.png`}
+                  >
+                    Download image
+                  </a>
+                )}
                 <button
                   type="button"
                   className="btn btn-secondary btn-sm"

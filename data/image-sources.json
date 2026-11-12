@@ -255,6 +255,160 @@
       "contentType": "image/webp",
       "rights": "reference",
       "note": "Official brand image used as a credited reference. Confirm permission or affiliate image terms before publishing. Not cleared for virtual try-on."
+    },
+    {
+      "sku": "BFL-OR-MTEE",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/a-woman-wearing-plain-brown-shirt-6786611/",
+      "imageUrl": "https://www.pexels.com/photo/a-woman-wearing-plain-brown-shirt-6786611/",
+      "localFile": "/images/products/everyday-merino-tee.jpg",
+      "bytes": 67831,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Oatmeal crew-neck tee on a model. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-MSHIRT",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/shirt-on-hanger-on-branch-22441297/",
+      "imageUrl": "https://www.pexels.com/photo/shirt-on-hanger-on-branch-22441297/",
+      "localFile": "/images/products/relaxed-merino-shirt.jpg",
+      "bytes": 366238,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Oat band-collar shirt on a wooden hanger. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-MHOOD",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/serious-black-man-wearing-hoodie-and-sweatpants-6311619/",
+      "imageUrl": "https://www.pexels.com/photo/serious-black-man-wearing-hoodie-and-sweatpants-6311619/",
+      "localFile": "/images/products/merino-hoodie.jpg",
+      "bytes": 150371,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Black heavyweight pullover hoodie on a model. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-MJOG",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/fashionable-casual-outfit-with-green-sweatpants-33055635/",
+      "imageUrl": "https://www.pexels.com/photo/fashionable-casual-outfit-with-green-sweatpants-33055635/",
+      "localFile": "/images/products/merino-joggers.jpg",
+      "bytes": 119843,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Forest-green relaxed sweatpants. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LTEE",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/man-in-white-t-shirt-19719794/",
+      "imageUrl": "https://www.pexels.com/photo/man-in-white-t-shirt-19719794/",
+      "localFile": "/images/products/everyday-lyocell-tee.jpg",
+      "bytes": 170763,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): White crew-neck tee on a model. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LSHIRT",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/woman-in-white-button-down-shirt-7752585/",
+      "imageUrl": "https://www.pexels.com/photo/woman-in-white-button-down-shirt-7752585/",
+      "localFile": "/images/products/oversized-lyocell-shirt.jpg",
+      "bytes": 92292,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Oversized white button-down shirt. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LHOOD",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/serious-black-man-in-hoodie-in-studio-6311600/",
+      "imageUrl": "https://www.pexels.com/photo/serious-black-man-in-hoodie-in-studio-6311600/",
+      "localFile": "/images/products/lyocell-hoodie.jpg",
+      "bytes": 106055,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Cream lightweight pullover hoodie. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LJOG",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/modern-beige-sweatpants-fashion-studio-shot-39457734/",
+      "imageUrl": "https://www.pexels.com/photo/modern-beige-sweatpants-fashion-studio-shot-39457734/",
+      "localFile": "/images/products/lyocell-joggers.jpg",
+      "bytes": 68252,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Beige cuffed joggers, waist-down product shot. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LSOCK",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/gray-socks-on-wooden-floor-5807032/",
+      "imageUrl": "https://www.pexels.com/photo/gray-socks-on-wooden-floor-5807032/",
+      "localFile": "/images/products/lyocell-rib-socks-2-pairs.jpg",
+      "bytes": 328301,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Grey ribbed socks worn with dark trousers. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LWPT",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/a-woman-wearing-a-white-long-sleeved-shirt-and-wide-leg-pants-9489467/",
+      "imageUrl": "https://www.pexels.com/photo/a-woman-wearing-a-white-long-sleeved-shirt-and-wide-leg-pants-9489467/",
+      "localFile": "/images/products/everyday-lyocell-wide-leg-pants.jpg",
+      "bytes": 196601,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Cream wide-leg trousers against a sage wall. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-MTRW",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/woman-wearing-white-dress-shirt-and-gray-pants-15221657/",
+      "imageUrl": "https://www.pexels.com/photo/woman-wearing-white-dress-shirt-and-gray-pants-15221657/",
+      "localFile": "/images/products/merino-relaxed-trousers.jpg",
+      "bytes": 79493,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Charcoal straight-leg trousers. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-MZIP",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/man-in-dark-gray-zip-up-sweater-hoodie-5978624/",
+      "imageUrl": "https://www.pexels.com/photo/man-in-dark-gray-zip-up-sweater-hoodie-5978624/",
+      "localFile": "/images/products/merino-zip-hoodie.jpg",
+      "bytes": 325265,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Charcoal full-zip hoodie on a model. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LLOJ",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/woman-in-pink-hoodie-and-pants-sitting-on-white-floor-10877552/",
+      "imageUrl": "https://www.pexels.com/photo/woman-in-pink-hoodie-and-pants-sitting-on-white-floor-10877552/",
+      "localFile": "/images/products/lyocell-lounge-joggers.jpg",
+      "bytes": 80304,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Dusty-pink lounge joggers. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "BFL-OR-LSCF",
+      "brand": "Butterfly Original",
+      "productPage": "https://www.pexels.com/photo/woman-in-brown-knit-scarf-3605077/",
+      "imageUrl": "https://www.pexels.com/photo/woman-in-brown-knit-scarf-3605077/",
+      "localFile": "/images/products/everyday-lyocell-scarf.jpg",
+      "bytes": 329475,
+      "contentType": "image/jpeg",
+      "rights": "reference",
+      "note": "Stand-in product photography from Pexels (free Pexels license): Camel chunky-knit scarf worn close-up. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
     }
   ],
   "skipped": []
