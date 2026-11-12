@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import { productBySlug } from "@/lib/catalog";
 import { generateTryOn } from "@/lib/tryon";
 
+// The IDM-VTON Space can sit in the ZeroGPU queue for a while; allow up to 5 min
+// on hosts that enforce a function timeout (Vercel: check your plan's limit).
+export const maxDuration = 300;
+
 const MAX_PHOTO_CHARS = 7_500_000; // about 5.5 MB binary
 
 export async function POST(request: Request) {

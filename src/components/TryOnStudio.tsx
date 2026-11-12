@@ -146,7 +146,8 @@ export function TryOnStudio({
 
   useEffect(() => {
     setColourIndex(0);
-    setSize(product?.sizes[0] ?? "");
+    // Colour and size pickers were removed from the UI; cart defaults apply.
+    setSize(product?.sizes.includes("M") ? "M" : product?.sizes[0] ?? "");
     setResult(null);
     setSaved(null);
     setAdded(false);
@@ -214,22 +215,6 @@ export function TryOnStudio({
       setError("Network error while generating the preview. Try again.");
     }
     setBusy(false);
-  }
-
-  function onColourChange(index: number) {
-    setColourIndex(index);
-    setSaved(null);
-    const next = product?.colours[index];
-    if (!next) return;
-    if (result?.mode === "overlay" && product?.imageUrl) {
-      setResult({
-        ...result,
-        garmentImage: `${product.imageUrl}?transparent=1&colour=${encodeURIComponent(next.hex)}`,
-      });
-    } else if (result) {
-      setResult(null);
-      setError("Colour changed. Generate the preview again to see the new colour.");
-    }
   }
 
   async function saveLook() {
@@ -399,46 +384,13 @@ export function TryOnStudio({
                   <span className="block text-[0.83rem] font-semibold leading-tight">{entry.name}</span>
                   <span className="block micro muted">{entry.composition}</span>
                   <span className="block micro" style={{ color: "#677E61" }}>
-                    {formatINR(entry.priceINR)} · {entry.sizes.length} sizes
+                    {formatINR(entry.priceINR)}
                   </span>
                 </span>
               </button>
             );
           })}
         </div>
-
-        {product && (
-          <div className="mt-4">
-            <p className="field-label mb-1.5">Colour · {colour?.name}</p>
-            <div className="swatch-grid">
-              {product.colours.map((option, index) => (
-                <button
-                  key={option.name}
-                  type="button"
-                  className={`swatch-button ${index === colourIndex ? "is-selected" : ""}`}
-                  style={{ background: option.hex }}
-                  aria-label={option.name}
-                  aria-pressed={index === colourIndex}
-                  onClick={() => onColourChange(index)}
-                />
-              ))}
-            </div>
-            <p className="field-label mt-3 mb-1.5">Size for the cart</p>
-            <div className="size-options">
-              {product.sizes.map((option) => (
-                <button
-                  key={option}
-                  type="button"
-                  className={`size-option ${size === option ? "is-selected" : ""}`}
-                  aria-pressed={size === option}
-                  onClick={() => setSize(option)}
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
 
         {error && <p className="error-text mt-3" role="alert">{error}</p>}
         <button type="button" className="btn btn-block mt-4" onClick={generate} disabled={busy || !photo || !consent}>
