@@ -6,8 +6,6 @@ import { ButterflyMark } from "@/components/brand/ButterflyMark";
 import { StarRating } from "@/components/StarRating";
 import {
   brandById,
-  brands,
-  featuredBrands,
   butterflyPicks,
   retailProducts,
 } from "@/lib/catalog";
@@ -17,6 +15,11 @@ import { formatINR } from "@/lib/format";
 import type { Product } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
+
+/** Activewear stays on the shop rail but out of the landing page story sections. */
+function isActivewear(product: Product) {
+  return product.category === "joggers" || /active/i.test(product.name);
+}
 
 export const metadata = {
   title: "Butterfly — Live to Love",
@@ -44,14 +47,14 @@ const LOOK_SEEDS = [
 
 export default function HomePage() {
   const all = retailProducts();
-  const newest = [...all]
+  const landing = all.filter((product) => !isActivewear(product));
+  const newest = [...landing]
     .sort(
       (a, b) =>
         Number(b.isNew) - Number(a.isNew) || b.lastSyncedAt.localeCompare(a.lastSyncedAt),
     )
-    .slice(0, 4);
-  const picks = butterflyPicks(4);
-  const featured = featuredBrands().slice(0, 4);
+    .slice(12, 16);
+  const picks = butterflyPicks(8).filter((product) => !isActivewear(product)).slice(0, 4);
   const feedback = getDb()
     .feedback.filter((item) => item.featured)
     .slice(0, 3);
@@ -66,7 +69,6 @@ export default function HomePage() {
     { slug: "cloud-white-lyocell-linen-shirt", caption: "A white shirt without the ironing" },
     { slug: "blue-denim-tencel-pleated-pants", caption: "Lyocell that falls, not clings" },
   ].map((item) => ({ ...item, product: all.find((product) => product.slug === item.slug) }));
-  const total = all.length;
 
   return (
     <>
@@ -81,43 +83,23 @@ export default function HomePage() {
               <ButterflyMark size={14} wing="#E6D6BD" accent="#C6A464" body="#F4F0E8" />
               Natural fibres, considered
             </span>
-            <span>Bengaluru · shipping across India</span>
           </div>
 
           <div className="hero-grid">
             <div className="hero-copy hero-enter">
               <h1 className="hero-type" aria-label="Live to Love.">
                 <span className="hero-line">Made for</span>
-                <span className="hero-line hero-line-accent">living.</span>
+                <span className="hero-line hero-line-accent pb-6">living.</span>
               </h1>
               <p className="hero-lede">
-                A quieter, more natural wardrobe: beautifully made Merino and Lyocell pieces selected
-                for the way they feel, move and endure.
+                Merino and Lyocell pieces selected for the way they feel, move and endure.
               </p>
               <div className="hero-actions">
                 <Link className="btn btn-hero-primary" href="/shop">
                   Explore the collection
                 </Link>
-                <Link className="btn btn-hero-secondary" href="/fabrics">
-                  Meet the fibres
-                </Link>
               </div>
             </div>
-
-            <aside className="hero-edition hero-enter-late" aria-label="Butterfly collection note">
-              <span className="hero-edition-number">01 / 03</span>
-              <p>THE NATURAL EDIT</p>
-              <span>Clothes with a softer footprint and a stronger point of view.</span>
-            </aside>
-          </div>
-
-          <div className="hero-lower">
-            <span>
-              <strong>{total} pieces</strong> from {brands().filter((brand) => brand.kind === "partner").length} partner
-              brands
-            </span>
-            <span>Traceable composition on every product page</span>
-            <span>Merino &amp; Lyocell, from brands we trust</span>
           </div>
         </div>
       </section>
@@ -129,7 +111,7 @@ export default function HomePage() {
               <span>Freedom to move</span>
               <span>Merino &amp; Lyocell</span>
               <span>Fabric verified</span>
-              <span>From brands we trust</span>
+              <span>Butterfly Original</span>
               <span>Live to Love</span>
               <span>Easy care</span>
               <span>Made for 16–30</span>
@@ -144,8 +126,8 @@ export default function HomePage() {
             <p className="eyebrow">Latest work</p>
             <h2 className="h2 mt-2">Newest on the rail</h2>
             <p>
-              Our latest drop, synced from partner feeds and hand-picked where the fabric and the fit
-              earn it.
+              Our latest drop from the Butterfly rail, hand-picked where the fabric and the fit earn
+              it.
             </p>
           </div>
           <Link className="link-arrow" href="/latest">
@@ -221,8 +203,9 @@ export default function HomePage() {
               freedom from constant ironing, freedom from clothing that asks you to sit differently.
             </p>
             <p>
-              We pick the best Merino and Lyocell clothing from brands that share our idea of comfort
-              and freedom. The butterfly stands for transformation — not a finished look, a direction.
+              We design Merino and Lyocell clothing around one idea of comfort and freedom, and make
+              it under our own label. The butterfly stands for transformation — not a finished look, a
+              direction.
             </p>
             <blockquote>
               &ldquo;We don&apos;t want to define your style; we want to give you the freedom to
@@ -280,7 +263,7 @@ export default function HomePage() {
             <p className="eyebrow">Butterfly Picks</p>
             <h2 className="h2 mt-2">The pieces we would buy first</h2>
             <p>
-              Hand-picked by our team from across the catalogue — different brands, one idea of
+              Hand-picked by our team from the Butterfly rail — different fabrics, one idea of
               comfort.
             </p>
           </div>
@@ -341,7 +324,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="fabric-strip">
+      {/* <section className="fabric-strip">
         <div className="shell fabric-strip-inner">
           <div>
             <p className="eyebrow">The fibres</p>
@@ -370,7 +353,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section shell">
         <div className="section-head">
@@ -380,35 +363,6 @@ export default function HomePage() {
           </div>
         </div>
         <PropertyBadges />
-      </section>
-
-      <section className="section-tight shell">
-        <div className="section-head">
-          <div className="section-head-copy">
-            <p className="eyebrow">Partner brands</p>
-            <h2 className="h2 mt-2">Curated, credited, never claimed</h2>
-            <p>
-              We select, present and sell. The brand named on each piece made it.
-            </p>
-          </div>
-          <Link className="link-arrow" href="/brands">
-            Full directory
-          </Link>
-        </div>
-        <div className="brand-strip">
-          {featured.map((brand) => (
-            <Link key={brand.id} href={`/brands/${brand.slug}`} className="brand-card">
-              <span className="brand-mark" aria-hidden="true">
-                {brand.logoMark}
-              </span>
-              <h3>{brand.name}</h3>
-              <span className="brand-tag">
-                {brand.fabrics.map((fabric) => fabrics[fabric].name).join(" · ")}
-              </span>
-              <p>{brand.indiaNote}</p>
-            </Link>
-          ))}
-        </div>
       </section>
 
       <section className="section shell">

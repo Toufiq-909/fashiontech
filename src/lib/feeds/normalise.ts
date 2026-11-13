@@ -18,6 +18,8 @@ export interface RawFeedProduct {
   imagePermission: boolean;
   /** "reference" = credited official brand image, not cleared for try-on. */
   imageRights?: "permitted" | "reference";
+  /** Our own garment mockup artwork, kept as a secondary image for try-on and customisation. */
+  mockupUrl?: string;
   sourceUrl: string;
   availability: "in-stock" | "low-stock" | "sold-out";
   description: string;
@@ -75,6 +77,15 @@ export function imagesFor(raw: RawFeedProduct, brand: Brand): ProductImage[] {
 export function normaliseProduct(raw: RawFeedProduct, brand: Brand, feedId: string, importedAt: string): Product {
   const { inr, rate } = toINR(raw.price, raw.currency);
   const images = imagesFor(raw, brand);
+  if (raw.mockupUrl) {
+    images.push({
+      kind: "owned-mockup",
+      url: raw.mockupUrl,
+      credit: "Butterfly Original — own mockup",
+      // Try-on stays limited to garments we own and have cleared for it.
+      allowedForTryOn: true,
+    });
+  }
   const fabricVerified =
     raw.compositionSource === "brand-product-data" || raw.compositionSource === "butterfly-tech-pack";
   const reviewsNote = raw.reviewNote ? ` ${raw.reviewNote}` : "";

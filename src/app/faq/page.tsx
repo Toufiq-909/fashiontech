@@ -4,30 +4,30 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Answers about Butterfly's curated Merino and Lyocell catalogue, ordering modes, delivery, returns, try-on privacy and custom designs.",
+    "Answers about Butterfly's own-label Merino and Lyocell catalogue, ordering, delivery, returns, try-on privacy and custom designs.",
   alternates: { canonical: "/faq" },
 };
 
 const questions = [
   {
     q: "What exactly is Butterfly?",
-    a: "Butterfly is an Indian fashion brand and curated retailer for 16–30 year-olds. We select Merino wool and Lyocell clothing from partner brands, present it in one place, and sell it. We also make a small own-label range, Butterfly Originals, with a manufacturing partner in India.",
+    a: "Butterfly is an Indian fashion brand for 16–30 year-olds. We design Merino wool and Lyocell clothing under our own label, Butterfly Original, and make it with a manufacturing partner in India. Every listing on the site is a Butterfly piece.",
   },
   {
-    q: "Are the partner clothes made by Butterfly?",
-    a: "No. Each product page names the brand that made it (“From [Brand]”). Butterfly curates, presents and sells; it does not claim partner products as its own. Butterfly Originals is our own label and is labelled separately.",
+    q: "Are the clothes made by Butterfly?",
+    a: "Yes — every piece on the site is a Butterfly Original: designed by Butterfly and produced by our manufacturing partner in India. Butterfly takes your order, payment and returns.",
   },
   {
     q: "How do you verify the fabric?",
-    a: "A piece is listed only when its main fibre is Merino wool or Lyocell at 50% or more. We show the exact composition. The “Fabric verified” badge appears only when that composition comes from the brand's own product data or our own tech pack. Lyocell is a plant-based cellulose fibre and is never described as “Lyocell wool”.",
+    a: "A piece is listed only when its main fibre is Merino wool or Lyocell at 50% or more. We show the exact composition. The “Fabric verified” badge appears only when that composition comes from our own tech pack. Lyocell is a plant-based cellulose fibre and is never described as “Lyocell wool”.",
   },
   {
-    q: "What is the difference between “Buy at brand” and “Order via Butterfly”?",
-    a: "Buy at brand sends you to the brand's own checkout through a clearly labelled link; Butterfly may earn a commission and the brand ships and handles returns. Order via Butterfly means Butterfly takes your order and payment, then forwards it to the brand for fulfilment. Each product page states which applies, who ships, the delivery window and the returns policy.",
+    q: "Who takes my order?",
+    a: "Butterfly always does. You order and pay on Butterfly, we make and ship the piece from India, and we handle returns. Each product page states the delivery window and the returns policy.",
   },
   {
-    q: "Why can I only try on Butterfly Originals?",
-    a: "Virtual try-on needs a garment image cleared for that use. Partner brands have not supplied such images, so we do not reuse their photography. Butterfly Originals use our own mockups, so the try-on button appears there. We hide it everywhere else.",
+    q: "Why can I only try on some pieces?",
+    a: "Virtual try-on needs a garment image cleared for that use. Pieces rendered with our own garment mockups support it; the try-on button appears there and stays hidden everywhere else.",
   },
   {
     q: "Do you keep my try-on photo?",
@@ -39,23 +39,23 @@ const questions = [
   },
   {
     q: "How do the price tiers work?",
-    a: "Merino is our “Luxury comfort” tier with a ₹4,000–₹4,500 guide; Lyocell is “Everyday value” with a ₹500–₹600 guide for Butterfly Originals. Partner brands set their own INR prices, which we show as they are. The guide is configurable in the admin panel and is not a promise that every partner piece sits inside it.",
+    a: "Merino is our “Luxury comfort” tier with a ₹4,000–₹4,500 guide; Lyocell is “Everyday value” with a ₹500–₹600 guide for Butterfly Originals. The guide is configurable in the admin panel and is not a promise that every piece sits inside it.",
   },
   {
     q: "What sizes do you stock?",
-    a: "It varies by brand and piece — sizes are shown on each product page. Our size guide gives relaxed-fit body measurements in inches, but when a brand supplies its own chart, use that. Partner size labels (for example UK sizes) are shown exactly as the brand lists them.",
+    a: "Sizes are shown on each product page. Our size guide gives relaxed-fit body measurements in inches — match your measurements to it before ordering.",
   },
   {
     q: "Which payments do you accept?",
-    a: "UPI, cards and cash on delivery for eligible PIN codes on orders placed through Butterfly. The checkout runs in test mode until payment gateway keys are configured, so no money is collected in the current demo. Buy-at-brand orders are paid on the brand's site.",
+    a: "UPI, cards and cash on delivery for eligible PIN codes on orders placed through Butterfly. The checkout runs in test mode until payment gateway keys are configured, so no money is collected in the current demo.",
   },
   {
     q: "Can I cancel or change an order?",
-    a: "Email hello@butterfly.example with your order ID as soon as possible. We can cancel or amend before the order is forwarded to the brand. Once forwarded, the brand's fulfilment and the returns policy apply.",
+    a: "Email hello@butterfly.example with your order ID as soon as possible. We can cancel or amend before the order goes into production at the workshop. Once it is in production, the returns policy applies.",
   },
   {
     q: "Do you ship outside India?",
-    a: "Butterfly's own checkout currently ships inside India. Some partner brands ship to India from abroad (delivery notes are on each brand page); buy-at-brand orders follow that brand's international shipping. We do not currently ship Butterfly orders out of India.",
+    a: "Butterfly currently ships inside India only. We do not ship orders out of India yet.",
   },
 ];
 

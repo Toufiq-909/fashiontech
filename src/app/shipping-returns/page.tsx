@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Shipping & returns",
   description:
-    "Delivery windows, who ships each Butterfly order, free-delivery threshold and returns rules for order-via-Butterfly and buy-at-brand pieces.",
+    "Delivery windows, who ships each Butterfly order, the free-delivery threshold and returns rules.",
   alternates: { canonical: "/shipping-returns" },
 };
 
@@ -17,19 +17,20 @@ export default function ShippingReturnsPage() {
         <span>Shipping &amp; returns</span>
       </nav>
       <p className="eyebrow mt-4">Help</p>
-      <h1 className="h1 mt-2">Shipping &amp; returns, by mode.</h1>
+      <h1 className="h1 mt-2">Shipping &amp; returns.</h1>
       <p className="lede mt-3">
-        There are two ways to buy on Butterfly, and they have different rules. The product page and
-        checkout always tell you which one applies.
+        Every piece on Butterfly is a Butterfly Original, ordered and shipped through Butterfly. The
+        product page and checkout always show the delivery window and returns rule that apply.
       </p>
 
-      <h2>Order via Butterfly</h2>
+      <h2>Ordering from Butterfly</h2>
       <p>
-        Butterfly takes your order and payment, then forwards it to the brand named on the piece. The
-        brand ships it, but Butterfly owns the customer relationship and the return request.
+        Butterfly takes your order and payment. Each piece is made under the Butterfly Original label
+        with our manufacturing partner in India, and Butterfly ships it and owns the customer
+        relationship and the return request.
       </p>
       <ul>
-        <li>Delivery within India: typically 3–7 working days after the brand dispatches.</li>
+        <li>Delivery within India: typically 3–7 working days after dispatch.</li>
         <li>Butterfly Originals: made-to-order in 5–8 working days, then shipped.</li>
         <li>Delivery fee: ₹99, free on orders of ₹2,000 or more.</li>
         <li>Tracking: the order page shows each status change from placed to delivered.</li>
@@ -38,40 +39,26 @@ export default function ShippingReturnsPage() {
         <li>Refunds: to the original payment method within 5–7 working days after the return is checked. COD refunds are by bank transfer.</li>
       </ul>
 
-      <h2>Buy at brand</h2>
-      <p>
-        The labelled link sends you to the brand&apos;s own checkout. The brand takes payment, ships the
-        order and handles returns. Butterfly may earn an affiliate commission and cannot override the
-        brand&apos;s delivery or returns policy. Check the brand page for its India delivery note.
-      </p>
-      <ul>
-        <li>Delivery: set by the brand, including any international shipping and duties.</li>
-        <li>Returns: the brand&apos;s policy. Butterfly can help you find the right contact but cannot process the refund.</li>
-        <li>Payment: charged by the brand, not Butterfly.</li>
-      </ul>
-
       <h2>What if something arrives damaged or wrong?</h2>
       <p>
         Email{" "}
         <a className="link-under" href="mailto:hello@butterfly.example">
           hello@butterfly.example
         </a>{" "}
-        within 48 hours with your order ID and photos. For an order placed through Butterfly, we will
-        arrange a replacement or refund with the brand. For a buy-at-brand order, we will help you raise
-        it with the brand, but the resolution is theirs.
+        within 48 hours with your order ID and photos. We will arrange a replacement or refund —
+        Butterfly owns the resolution from start to finish.
       </p>
 
       <h2>International orders</h2>
       <p>
-        Butterfly&apos;s own checkout ships within India only. Some partner brands ship to India from
-        abroad; their brand pages state the window, cost and any duties. Duties and import taxes on
-        buy-at-brand orders are the customer&apos;s responsibility unless the brand says otherwise.
+        Butterfly ships within India only. We do not ship orders out of India yet.
       </p>
 
       <h2>Cancellations and changes</h2>
       <p>
         Contact us as soon as possible with your order ID. We can usually cancel or amend before the
-        order is forwarded to the brand. Once forwarded, the return process applies. Custom design
+        order goes into production at the workshop. Once it is in production, the return process
+        applies. Custom design
         production starts quickly and may not be cancellable after 24 hours.
       </p>
 

@@ -5,7 +5,7 @@ export const site = {
   tagline: "Live to Love",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   description:
-    "Butterfly curates Merino wool and Lyocell clothing from brands that share our idea of comfort and freedom. Relaxed fits, easy care, everyday movement for 16–30.",
+    "Butterfly Original — Merino wool and Lyocell clothing made for comfort and freedom of movement. Relaxed fits, easy care, everyday wear for 16–30.",
   instagram: "https://www.instagram.com/",
   email: "hello@butterfly.example",
   phone: "+91 90000 00000",
@@ -164,7 +164,7 @@ export const footerNav = [
 ];
 
 export const affiliateDisclosure =
-  "Some links to partner brands are affiliate links: Butterfly may earn a commission if you buy, at no extra cost to you. Prices and availability are set by the brand.";
+  "Every piece on Butterfly is a Butterfly Original: Butterfly takes your order, payment and returns, and makes each piece with its manufacturing partner in India.";
 
 /** Flat fee added to a Butterfly Original blank when a customer customises it. */
 export const customisationFee = 250;

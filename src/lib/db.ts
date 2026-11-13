@@ -10,30 +10,7 @@ const DATA_DIR = process.env.BUTTERFLY_DATA_DIR ?? path.join(process.cwd(), ".da
 const DB_FILE = path.join(DATA_DIR, "db.json");
 const SEED_DIR = path.join(process.cwd(), "data");
 
-const FEED_FILES = ["merino-brands.json", "lyocell-brands.json", "butterfly-originals.json"];
-const PARTNER_APPROVED = new Set([
-  "UM-ACTIVE-TEE",
-  "UM-SLEEP-CREW",
-  "WP-100-CREW",
-  "WP-SIGNATURE-CREW",
-  "WC-EVERYDAY-CREW",
-  "WC-POLO",
-  "WC-VNECK-W",
-  "MC-111-LS",
-  "MC-121L-SCOOP",
-  "MC-112-RAGLAN",
-  "MS-P60723313",
-  "MS-P60723342",
-  "WS-301086760",
-  "W-23FEW62400",
-  "W-PINTUCK-TUNIC",
-  "AND-AZURE-LYOCELL",
-  "AND-CLOUD-LYOCELL",
-  "AND-DRIFT-LYOCELL",
-  "CW-M-SHIRT-10521",
-  "CW-W-BLOUSE-DENIM",
-  "CW-W-BLOUSE-RUST",
-]);
+const FEED_FILES = ["butterfly-originals.json"];
 const PICKS = new Set([
   "everyday-merino-tee",
   "everyday-lyocell-tee",
@@ -76,11 +53,7 @@ function pairStyle(products: Product[]) {
   const bySlug = new Map(products.map((product) => [product.slug, product]));
   for (const product of products) {
     const candidates = products.filter(
-      (other) =>
-        other.id !== product.id &&
-        other.status === "approved" &&
-        other.category !== product.category &&
-        other.brandId !== product.brandId,
+      (other) => other.id !== product.id && other.status === "approved" && other.category !== product.category,
     );
     const hash = [...product.slug].reduce((acc, char) => acc + char.charCodeAt(0), 0);
     product.styleWith = [0, 1]
@@ -116,9 +89,6 @@ function seed(): Database {
         const product = normaliseProduct(raw, brand, feed.feedId, payload.generatedAt);
         if (seenSlugs.has(product.slug)) product.slug = `${product.slug}-${slugify(raw.sku)}`;
         seenSlugs.add(product.slug);
-        if (brand.kind === "partner") {
-          product.status = PARTNER_APPROVED.has(raw.sku) ? "approved" : "pending";
-        }
         product.butterflyPick = PICKS.has(product.slug);
         products.push(product);
       }

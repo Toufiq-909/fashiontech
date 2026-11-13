@@ -13,7 +13,7 @@ import { categories, fabrics } from "@/lib/config";
 export const metadata = {
   title: "Shop Merino & Lyocell clothing",
   description:
-    "Shop Butterfly's curated catalogue of Merino wool and Lyocell shirts, t-shirts, pants, hoodies and casual wear from credited partner brands.",
+    "Shop Butterfly Original: Merino wool and Lyocell shirts, t-shirts, pants, hoodies and casual wear, made under our own label in India.",
   alternates: { canonical: "/shop" },
 };
 

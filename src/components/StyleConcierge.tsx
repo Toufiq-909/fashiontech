@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 type Recommendation = { name: string; brand: string; priceINR: number; fabric: string; href: string };
 type BotReply = { message: string; results: Recommendation[] };
 
-const QUICK_PROMPTS = ["Easy-care shirts", "Merino for travel", "Something under ₹2,000"];
+const QUICK_PROMPTS = ["I want formals", "Easy-care shirts", "Merino for travel", "Something under ₹2,000"];
 
 export function StyleConcierge() {
   const [open, setOpen] = useState(false);
@@ -14,6 +14,16 @@ export function StyleConcierge() {
   const [reply, setReply] = useState<BotReply | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 32);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const visible = scrolled || open;
 
   async function ask(message: string) {
     const trimmed = message.trim();
@@ -43,7 +53,10 @@ export function StyleConcierge() {
   }
 
   return (
-    <aside className={`style-concierge ${open ? "is-open" : ""}`} aria-label="Butterfly shopping assistant">
+    <aside
+      className={`style-concierge ${open ? "is-open" : ""} ${visible ? "is-visible" : ""}`}
+      aria-label="Butterfly shopping assistant"
+    >
       {open && (
         <div className="concierge-panel" id="style-concierge-panel">
           <div className="concierge-head">

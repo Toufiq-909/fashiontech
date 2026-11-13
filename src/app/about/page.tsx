@@ -123,11 +123,11 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="card p-5">
-            <p className="eyebrow">03 · The credit rule</p>
-            <h3 className="h3 mt-2">The brand is always named</h3>
+            <p className="eyebrow">03 · The composition rule</p>
+            <h3 className="h3 mt-2">The blend is always shown</h3>
             <p className="mt-2 text-[0.88rem] muted">
-              We never imply the partner pieces are ours. Images appear only when supplied or
-              permitted; otherwise you see a clearly labelled placeholder.
+              Every product page states its exact Merino or Lyocell composition, taken from our tech
+              pack — no vague fabric claims.
             </p>
           </div>
         </div>
@@ -162,8 +162,8 @@ export default function AboutPage() {
             <p className="eyebrow">The founders</p>
             <h2 className="h2 mt-2">Built by three people who noticed the gap.</h2>
             <p className="mt-3 text-[0.9rem] muted max-w-[38ch]">
-              Butterfly is a young Indian brand, based in Bengaluru, working with partner brands and a
-              manufacturing partner in India.
+              Butterfly is a young Indian brand, based in Bengaluru, designing its own label and making
+              it with a manufacturing partner in India.
             </p>
           </div>
           <div>

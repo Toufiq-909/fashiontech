@@ -24,7 +24,7 @@ export function ProductCard({
         <div className="product-art" style={{ background: brand.tone }}>
           <div className="badge-row">
             {product.isNew && <span className="badge badge-new">New</span>}
-            {product.butterflyPick && <span className="badge badge-pick">Butterfly Pick</span>}
+            {/* {product.butterflyPick && <span className="badge badge-pick">Butterfly Pick</span>} */}
             {!product.isNew && product.fabric === "merino" && (
               <span className="badge badge-merino">Luxury comfort</span>
             )}

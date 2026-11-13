@@ -17,6 +17,7 @@ export interface TryOnProduct {
   sizes: string[];
   colours: { name: string; hex: string }[];
   imageUrl: string | null;
+  photoUrl: string | null;
   brandName: string;
 }
 
@@ -145,7 +146,8 @@ export function TryOnStudio({
 
   useEffect(() => {
     setColourIndex(0);
-    setSize(product?.sizes[0] ?? "");
+    // Colour and size pickers were removed from the UI; cart defaults apply.
+    setSize(product?.sizes.includes("M") ? "M" : product?.sizes[0] ?? "");
     setResult(null);
     setSaved(null);
     setAdded(false);
@@ -215,22 +217,6 @@ export function TryOnStudio({
     setBusy(false);
   }
 
-  function onColourChange(index: number) {
-    setColourIndex(index);
-    setSaved(null);
-    const next = product?.colours[index];
-    if (!next) return;
-    if (result?.mode === "overlay" && product?.imageUrl) {
-      setResult({
-        ...result,
-        garmentImage: `${product.imageUrl}?transparent=1&colour=${encodeURIComponent(next.hex)}`,
-      });
-    } else if (result) {
-      setResult(null);
-      setError("Colour changed. Generate the preview again to see the new colour.");
-    }
-  }
-
   async function saveLook() {
     if (!result || !product) return;
     setSaveBusy(true);
@@ -289,10 +275,9 @@ export function TryOnStudio({
   if (!products.length) {
     return (
       <div className="empty-state">
-        <h2>No try-on pieces are cleared right now.</h2>
+        <h2>No pieces are ready for try-on right now.</h2>
         <p>
-          The try-on button only appears on garments whose images the brand permits for this use.
-          Right now that means our own Butterfly Originals.
+          Try-on is only available for pieces we photograph ourselves — our Butterfly Originals.
         </p>
         <Link className="btn btn-sm mt-4" href="/shop">
           Browse the catalogue
@@ -359,8 +344,8 @@ export function TryOnStudio({
         <label className="check mb-3">
           <input type="checkbox" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
           <span>
-            I consent to this photo being processed to generate the preview, and confirm I have the
-            right to use it. I have read the{" "}
+            I'm happy for my photo to be used to create the preview, and I have the right to use it.
+            I have read the{" "}
             <Link className="link-under" href="/privacy">
               privacy notice
             </Link>
@@ -370,8 +355,8 @@ export function TryOnStudio({
 
         <div className="privacy-note">
           <strong>Photo privacy</strong>
-          Processed only for this preview. Not stored unless you press “Save this look”, never used for
-          marketing, and removable in one click. We do not keep a copy after the session otherwise.
+          Your photo is only used to make your preview. We don't keep it unless you press
+          “Save this look”, and we never use it for marketing. Saved looks can be deleted in one click.
         </div>
 
         <h2 className="mt-5">2. The garment</h2>
@@ -392,13 +377,13 @@ export function TryOnStudio({
                   className="w-11 h-14 rounded-md overflow-hidden shrink-0"
                   style={{ background: entry.colours[0]?.hex ?? "#F1DEC4" }}
                 >
-                  {entry.imageUrl && <img src={entry.imageUrl} alt="" className="w-full h-full object-cover" />}
+                  {entry.photoUrl && <img src={entry.photoUrl} alt="" className="w-full h-full object-cover" />}
                 </span>
                 <span className="min-w-0">
                   <span className="block text-[0.83rem] font-semibold leading-tight">{entry.name}</span>
                   <span className="block micro muted">{entry.composition}</span>
                   <span className="block micro" style={{ color: "#677E61" }}>
-                    {formatINR(entry.priceINR)} · {entry.sizes.length} sizes
+                    {formatINR(entry.priceINR)}
                   </span>
                 </span>
               </button>
@@ -406,53 +391,22 @@ export function TryOnStudio({
           })}
         </div>
 
-        {product && (
-          <div className="mt-4">
-            <p className="field-label mb-1.5">Colour · {colour?.name}</p>
-            <div className="swatch-grid">
-              {product.colours.map((option, index) => (
-                <button
-                  key={option.name}
-                  type="button"
-                  className={`swatch-button ${index === colourIndex ? "is-selected" : ""}`}
-                  style={{ background: option.hex }}
-                  aria-label={option.name}
-                  aria-pressed={index === colourIndex}
-                  onClick={() => onColourChange(index)}
-                />
-              ))}
-            </div>
-            <p className="field-label mt-3 mb-1.5">Size for the cart</p>
-            <div className="size-options">
-              {product.sizes.map((option) => (
-                <button
-                  key={option}
-                  type="button"
-                  className={`size-option ${size === option ? "is-selected" : ""}`}
-                  aria-pressed={size === option}
-                  onClick={() => setSize(option)}
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
         {error && <p className="error-text mt-3" role="alert">{error}</p>}
         <button type="button" className="btn btn-block mt-4" onClick={generate} disabled={busy || !photo || !consent}>
           {busy ? (
             <>
-              <span className="loading-line" aria-hidden="true" /> Generating preview…
+              <span className="loading-line" aria-hidden="true" /> Creating your preview — usually 1–2 minutes…
             </>
           ) : result ? (
             "Generate again"
           ) : (
-            "Generate preview"
+            "Try it on with AI"
           )}
         </button>
         <p className="hint mt-2">
-          {photo ? "Preview is generated for this session only." : "Upload a photo and confirm consent to begin."}
+          {photo
+            ? "Your preview is made just for this visit — it isn't kept unless you save the look."
+            : "Add a photo and tick the box above to begin."}
         </p>
       </div>
 
@@ -468,9 +422,9 @@ export function TryOnStudio({
                 </svg>
               </div>
               <strong className="block mb-1">Your preview appears here.</strong>
-              Upload a photo, choose a garment, then generate. If no try-on model key is configured,
-              you will see a 2D garment overlay you can reposition — clearly labelled, never passed off
-              as an AI render.
+              Upload a photo, pick a piece, then tap “Try it on”. If our try-on service is busy,
+              you'll get a quick preview instead — just move and resize the garment until it looks
+              right on you.
             </div>
           ) : (
             <div className="studio-stage-inner">
@@ -528,8 +482,8 @@ export function TryOnStudio({
                   </label>
                 ))}
                 <p className="hint mt-2">
-                  A 2D overlay is an honest approximation: it will not reshape the garment to your body.
-                  Add a try-on model key for a generated render.
+                  This quick preview places the garment on your photo but doesn't fit it to your
+                  body. Try again in a minute for the full preview.
                 </p>
               </div>
             )}
@@ -577,6 +531,15 @@ export function TryOnStudio({
                 <button type="button" className="btn btn-secondary btn-sm" onClick={saveLook} disabled={saveBusy}>
                   {saveBusy ? "Saving…" : saved ? "Look saved" : "Save this look"}
                 </button>
+                {result?.mode === "image" && result.image && (
+                  <a
+                    className="btn btn-secondary btn-sm"
+                    href={result.image}
+                    download={`butterfly-tryon-${product?.slug ?? "look"}.png`}
+                  >
+                    Download image
+                  </a>
+                )}
                 <button
                   type="button"
                   className="btn btn-secondary btn-sm"
@@ -617,11 +580,11 @@ export function TryOnStudio({
         )}
 
         <div className="studio-panel mt-3">
-          <h3>How try-on eligibility works</h3>
+          <h3>Why do only some pieces have try-on?</h3>
           <p className="text-[0.83rem] muted">
-            We only show a try-on button when the garment image is supplied by the brand or owned by
-            Butterfly and permitted for this purpose. Partner products without a cleared image hide
-            the button entirely; we do not scrape or reuse their photography.
+            Try-on uses the garment's photo, so we only offer it for pieces whose photos we own or
+            that a brand has approved. You'll see it on our own Butterfly Originals — never on
+            partner photography without permission.
           </p>
           <Link className="link-arrow mt-3 inline-flex" href="/shop">
             Browse all pieces

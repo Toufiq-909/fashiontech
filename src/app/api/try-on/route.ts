@@ -2,6 +2,10 @@ import { NextResponse } from "next/server";
 import { productBySlug } from "@/lib/catalog";
 import { generateTryOn } from "@/lib/tryon";
 
+// The IDM-VTON Space can sit in the ZeroGPU queue for a while; allow up to 5 min
+// on hosts that enforce a function timeout (Vercel: check your plan's limit).
+export const maxDuration = 300;
+
 const MAX_PHOTO_CHARS = 7_500_000; // about 5.5 MB binary
 
 export async function POST(request: Request) {
@@ -36,7 +40,7 @@ export async function POST(request: Request) {
   const product = body.productSlug ? productBySlug(body.productSlug) : null;
   if (!product || product.status !== "approved" || !product.tryOnEligible) {
     return NextResponse.json(
-      { error: "That piece does not have a garment image cleared for virtual try-on." },
+      { error: "Sorry, try-on isn't available for this piece." },
       { status: 400 },
     );
   }
@@ -69,7 +73,7 @@ export async function POST(request: Request) {
     const code = error instanceof Error ? error.message : "TRYON_ERROR";
     if (code === "NO_TRIABLE_IMAGE") {
       return NextResponse.json(
-        { error: "This garment image is not cleared for try-on." },
+        { error: "Try-on isn't available for this piece right now." },
         { status: 409 },
       );
     }

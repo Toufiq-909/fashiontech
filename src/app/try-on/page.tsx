@@ -6,7 +6,7 @@ import { approvedProducts, brandById } from "@/lib/catalog";
 export const metadata: Metadata = {
   title: "Virtual try-on",
   description:
-    "Upload a photo and preview Butterfly Original Merino and Lyocell pieces on yourself. Consent-first, session-only photo processing.",
+    "Upload a photo and see Butterfly pieces on you before you buy. Your photo stays private.",
   alternates: { canonical: "/try-on" },
 };
 
@@ -27,6 +27,7 @@ export default async function TryOnPage({ searchParams }: { searchParams: Search
       sizes: product.sizes,
       colours: product.colours,
       imageUrl: product.images.find((image) => image.allowedForTryOn)?.url ?? null,
+      photoUrl: product.images.find((image) => image.url && !image.url.startsWith("/api/garment"))?.url ?? null,
       brandName: brandById(product.brandId)?.name ?? "Butterfly Original",
     }));
 
@@ -45,13 +46,12 @@ export default async function TryOnPage({ searchParams }: { searchParams: Search
           </div>
           <div>
             <p className="lede">
-              Upload a photo, consent, choose a garment, and preview it on your own body. Swap colour,
-              compare, then add to cart or save the look.
+              Upload a photo, pick a piece, and see it on you. Compare, then add to cart or save the
+              look.
             </p>
             <p className="hint mt-3">
-              Currently {eligible.length} {eligible.length === 1 ? "piece is" : "pieces are"} cleared for
-              try-on: our own Butterfly Originals. Partner photography is not reused without
-              permission.
+              Try-on works for {eligible.length} {eligible.length === 1 ? "piece" : "pieces"} right
+              now — our own Butterfly Originals.
             </p>
           </div>
         </div>
@@ -84,24 +84,20 @@ export default async function TryOnPage({ searchParams }: { searchParams: Search
           </Link>
         </div>
         <div className="card p-5">
-          <p className="eyebrow">No key? No pretence.</p>
-          <h2 className="h3 mt-2">Fallback, labelled.</h2>
+          <p className="eyebrow">If it&apos;s busy</p>
+          <h2 className="h3 mt-2">A simple backup.</h2>
           <p className="mt-2 text-[0.86rem] muted">
-            With no virtual try-on API key configured, Butterfly uses a client-side 2D garment overlay.
-            It is clearly marked, adjustable, and never described as an AI-generated render.
-          </p>
-          <p className="mt-2 text-[0.86rem] muted">
-            Add <code>TRYON_API_URL</code> and <code>TRYON_API_KEY</code> to switch the service to a
-            configured model provider.
+            If our try-on service is busy, you&apos;ll still get a preview: the garment is laid over
+            your photo, and you can move and resize it until it looks right. We always say when a
+            preview is the quick kind, so you&apos;re never misled.
           </p>
         </div>
       </section>
 
       <div className="notice notice-plum">
-        <strong>What leaves this device?</strong> On generate, the photo and garment reference are sent
-        to Butterfly&apos;s server; if a provider is configured, that request is forwarded to the
-        provider for rendering. Butterfly does not write the photo to disk unless you save the look.
-        The saved look is stored in Butterfly&apos;s local data store with a delete control.
+        <strong>Where does your photo go?</strong> When you tap “Try it on”, your photo is sent
+        securely to Butterfly to create your preview. We don&apos;t keep it unless you press
+        “Save this look” — and saved looks can be deleted any time.
       </div>
       <div className="h-8" />
     </div>

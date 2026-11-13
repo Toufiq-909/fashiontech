@@ -68,7 +68,7 @@ export default function PrivacyPage() {
 
       <h2>Who we share with</h2>
       <ul>
-        <li>The partner brand named on your order, to fulfil it (name, address, phone and item details).</li>
+        <li>Our manufacturing partner in India, only what is needed to produce your piece (no payment details).</li>
         <li>A payment gateway, to process payment.</li>
         <li>A virtual try-on provider, only when you request a preview and a provider is configured.</li>
         <li>Hosting and storage providers that run this site, under their own safeguards.</li>

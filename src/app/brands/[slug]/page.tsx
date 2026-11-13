@@ -95,14 +95,14 @@ export default async function BrandPage({ params }: { params: Params }) {
             <p className="mt-2 text-[0.88rem] muted">
               {buyAtBrand
                 ? `${brand.name} takes payment and ships your order directly. Butterfly earns a commission on referred sales and does not handle the parcel.`
-                : `Butterfly takes your order and payment, then forwards it to ${brand.name} for fulfilment. Butterfly is not the manufacturer.`}
+                : `Butterfly takes your order and payment. Your piece is made under the Butterfly Original label with our manufacturing partner in India and shipped by Butterfly.`}
             </p>
           </div>
           <div className="card p-5">
             <h2 className="h3">Fabric verification</h2>
             <p className="mt-2 text-[0.88rem] muted">
               Each listed piece shows its exact composition. The “Fabric verified” badge is used only
-              when that composition came from {brand.name}&apos;s own product data.
+              when that composition comes from our own tech pack.
             </p>
           </div>
           <div className="card p-5">
@@ -146,18 +146,20 @@ export default async function BrandPage({ params }: { params: Params }) {
 
       <section className="section-tight">
         <div className="notice">
-          <strong>Brand relationship.</strong> {brand.affiliateDisclosure} All trademarks and product
-          imagery belong to {brand.name}. Butterfly lists these pieces as a curator and retailer; a
-          listing is not a claim of ownership or endorsement beyond the commercial arrangement
-          described here.
+          <strong>Our label.</strong>{" "}
+          {brand.kind === "own-label"
+            ? "Every piece here is a Butterfly Original: designed by Butterfly, made by our manufacturing partner in India, sold and shipped by Butterfly."
+            : `${brand.affiliateDisclosure} All trademarks and product imagery belong to ${brand.name}. Butterfly lists these pieces as a curator and retailer; a listing is not a claim of ownership or endorsement beyond the commercial arrangement described here.`}
         </div>
-        <div className="mt-5 flex flex-wrap gap-2">
-          {otherBrands.map((other) => (
-            <Link key={other.id} className="chip" href={`/brands/${other.slug}`}>
-              {other.name}
-            </Link>
-          ))}
-        </div>
+        {otherBrands.length > 0 && (
+          <div className="mt-5 flex flex-wrap gap-2">
+            {otherBrands.map((other) => (
+              <Link key={other.id} className="chip" href={`/brands/${other.slug}`}>
+                {other.name}
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
       <div className="h-8" />
     </div>
