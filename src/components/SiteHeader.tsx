@@ -71,12 +71,12 @@ export function SiteHeader() {
 
   return (
     <header className="site-header">
-      <div className="announcement">
+      {/* <div className="announcement">
         <div className="shell announcement-inner">
           <span>Fabric composition and source shown on every piece</span>
           <span className="announcement-secondary">Free delivery over ₹2,000 · Ships across India</span>
         </div>
-      </div>
+      </div> */}
       <div className="shell header-bar">
         <Link href="/" aria-label="Butterfly home" className="shrink-0">
           <Logo light compact />

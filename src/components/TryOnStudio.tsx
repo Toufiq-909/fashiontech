@@ -275,10 +275,9 @@ export function TryOnStudio({
   if (!products.length) {
     return (
       <div className="empty-state">
-        <h2>No try-on pieces are cleared right now.</h2>
+        <h2>No pieces are ready for try-on right now.</h2>
         <p>
-          The try-on button only appears on garments whose images the brand permits for this use.
-          Right now that means our own Butterfly Originals.
+          Try-on is only available for pieces we photograph ourselves — our Butterfly Originals.
         </p>
         <Link className="btn btn-sm mt-4" href="/shop">
           Browse the catalogue
@@ -345,8 +344,8 @@ export function TryOnStudio({
         <label className="check mb-3">
           <input type="checkbox" checked={consent} onChange={(event) => setConsent(event.target.checked)} />
           <span>
-            I consent to this photo being processed to generate the preview, and confirm I have the
-            right to use it. I have read the{" "}
+            I'm happy for my photo to be used to create the preview, and I have the right to use it.
+            I have read the{" "}
             <Link className="link-under" href="/privacy">
               privacy notice
             </Link>
@@ -356,8 +355,8 @@ export function TryOnStudio({
 
         <div className="privacy-note">
           <strong>Photo privacy</strong>
-          Processed only for this preview. Not stored unless you press “Save this look”, never used for
-          marketing, and removable in one click. We do not keep a copy after the session otherwise.
+          Your photo is only used to make your preview. We don't keep it unless you press
+          “Save this look”, and we never use it for marketing. Saved looks can be deleted in one click.
         </div>
 
         <h2 className="mt-5">2. The garment</h2>
@@ -396,7 +395,7 @@ export function TryOnStudio({
         <button type="button" className="btn btn-block mt-4" onClick={generate} disabled={busy || !photo || !consent}>
           {busy ? (
             <>
-              <span className="loading-line" aria-hidden="true" /> Generating with IDM-VTON — usually 1–2 minutes…
+              <span className="loading-line" aria-hidden="true" /> Creating your preview — usually 1–2 minutes…
             </>
           ) : result ? (
             "Generate again"
@@ -406,8 +405,8 @@ export function TryOnStudio({
         </button>
         <p className="hint mt-2">
           {photo
-            ? "Runs the open-source IDM-VTON model on Hugging Face. The preview is generated for this session only."
-            : "Upload a photo and confirm consent to begin."}
+            ? "Your preview is made just for this visit — it isn't kept unless you save the look."
+            : "Add a photo and tick the box above to begin."}
         </p>
       </div>
 
@@ -423,9 +422,9 @@ export function TryOnStudio({
                 </svg>
               </div>
               <strong className="block mb-1">Your preview appears here.</strong>
-              Upload a photo, choose a garment, then generate. The IDM-VTON model on Hugging Face
-              renders the garment onto your body; if the model is busy you will see a 2D garment
-              overlay you can reposition — clearly labelled, never passed off as an AI render.
+              Upload a photo, pick a piece, then tap “Try it on”. If our try-on service is busy,
+              you'll get a quick preview instead — just move and resize the garment until it looks
+              right on you.
             </div>
           ) : (
             <div className="studio-stage-inner">
@@ -483,8 +482,8 @@ export function TryOnStudio({
                   </label>
                 ))}
                 <p className="hint mt-2">
-                  A 2D overlay is an honest approximation: it will not reshape the garment to your body.
-                  Try again in a minute for the AI render.
+                  This quick preview places the garment on your photo but doesn't fit it to your
+                  body. Try again in a minute for the full preview.
                 </p>
               </div>
             )}
@@ -581,11 +580,11 @@ export function TryOnStudio({
         )}
 
         <div className="studio-panel mt-3">
-          <h3>How try-on eligibility works</h3>
+          <h3>Why do only some pieces have try-on?</h3>
           <p className="text-[0.83rem] muted">
-            We only show a try-on button when the garment image is supplied by the brand or owned by
-            Butterfly and permitted for this purpose. Partner products without a cleared image hide
-            the button entirely; we do not scrape or reuse their photography.
+            Try-on uses the garment's photo, so we only offer it for pieces whose photos we own or
+            that a brand has approved. You'll see it on our own Butterfly Originals — never on
+            partner photography without permission.
           </p>
           <Link className="link-arrow mt-3 inline-flex" href="/shop">
             Browse all pieces

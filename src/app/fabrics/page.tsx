@@ -10,6 +10,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/fabrics" },
 };
 
+const swatchPhotos: Record<string, string> = {
+  "Teal Tide, 200 GSM Merino Wool": "/images/fabrics/teal-merino-knit.jpg",
+  "Oat Merino, 175 GSM": "/images/fabrics/oat-merino-knit.jpg",
+  "Dusty pink Lyocell": "/images/fabrics/pink-lyocell.jpg",
+  "Steel blue Lyocell": "/images/fabrics/steel-blue-lyocell.jpg",
+};
+
 const comparison = [
   ["Source", "Renewable wool from sheep, mulesing-free sources", "Wood pulp cellulose, closed-loop solvent process"],
   ["Hand-feel", "Soft, fine, slightly springy; bends rather than pricks", "Cool, smooth and fluid, with a soft drape"],
@@ -59,6 +66,15 @@ export default function FabricsPage() {
               <div className="fabric-swatches mt-5">
                 {fabric.swatch.map((swatch) => (
                   <div key={swatch.name} className="fabric-swatch" style={{ background: swatch.hex, minHeight: 110 }}>
+                    {swatchPhotos[swatch.name] && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={swatchPhotos[swatch.name]}
+                        alt={`${swatch.name} fabric close-up`}
+                        loading="lazy"
+                        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                      />
+                    )}
                     <span>{swatch.name}</span>
                   </div>
                 ))}
@@ -143,6 +159,13 @@ export default function FabricsPage() {
               </p>
             </div>
             <div className="fabric-swatch" style={{ background: "#73976A", minHeight: 180 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/fabrics/teal-wool-wide.jpg"
+                alt="Teal Tide, 200 GSM Merino Wool fabric close-up"
+                loading="lazy"
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+              />
               <span>Teal Tide, 200 GSM Merino Wool</span>
             </div>
           </div>

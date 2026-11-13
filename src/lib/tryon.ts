@@ -48,7 +48,7 @@ export async function generateTryOn(input: {
         image: rendered,
         garmentImage,
         notice:
-          "AI render generated with the open IDM-VTON model on Hugging Face. For this session only — it is not stored unless you save the look.",
+          "Your preview is ready. It isn't kept unless you save the look.",
       };
     } catch (error) {
       console.error(
@@ -63,6 +63,6 @@ export async function generateTryOn(input: {
     provider: "local-overlay",
     garmentImage,
     notice:
-      "The AI try-on model is busy or unavailable right now, so this is a client-side 2D overlay preview, not an AI render. Try again in a minute for the AI render.",
+      "Our try-on service is busy right now, so here's a quick preview instead. Try again in a minute for the full preview.",
   };
 }

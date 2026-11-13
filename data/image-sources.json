@@ -409,6 +409,61 @@
       "contentType": "image/jpeg",
       "rights": "reference",
       "note": "Stand-in product photography from Pexels (free Pexels license): Camel chunky-knit scarf worn close-up. Used for this demonstration catalogue only; not cleared for virtual try-on — the owned SVG mockup remains the try-on and customisation asset."
+    },
+    {
+      "sku": "FABRIC-TEAL-MERINO",
+      "source": "Pexels (free license)",
+      "productPage": "https://www.pexels.com/photo/close-up-texture-of-green-knit-fabric/",
+      "imageUrl": "https://images.pexels.com/photos/36033692/pexels-photo-36033692.jpeg",
+      "localFile": "/images/fabrics/teal-merino-knit.jpg",
+      "bytes": 170381,
+      "contentType": "image/jpeg",
+      "rights": "free",
+      "note": "Free Pexels stock photo of green/teal knit fabric used for the Teal Tide merino swatch."
+    },
+    {
+      "sku": "FABRIC-OAT-MERINO",
+      "source": "Pexels (free license)",
+      "productPage": "https://www.pexels.com/photo/beige-cable-knit-wool-texture-6757412/",
+      "imageUrl": "https://images.pexels.com/photos/6757412/pexels-photo-6757412.jpeg",
+      "localFile": "/images/fabrics/oat-merino-knit.jpg",
+      "bytes": 361615,
+      "contentType": "image/jpeg",
+      "rights": "free",
+      "note": "Free Pexels stock photo of beige cable-knit wool used for the Oat Merino swatch."
+    },
+    {
+      "sku": "FABRIC-PINK-LYOCELL",
+      "source": "Wikimedia Commons (free license)",
+      "productPage": "https://commons.wikimedia.org/wiki/File:Pink_Woven_Cotton_Silk_Fabric_Texture_Free_Creative_Commons_(6962346249).jpg",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pink_Woven_Cotton_Silk_Fabric_Texture_Free_Creative_Commons_(6962346249).jpg",
+      "localFile": "/images/fabrics/pink-lyocell.jpg",
+      "bytes": 198244,
+      "contentType": "image/jpeg",
+      "rights": "free",
+      "note": "Free-license Wikimedia Commons photo of pink woven fabric used for the Dusty pink Lyocell swatch."
+    },
+    {
+      "sku": "FABRIC-STEEL-BLUE-LYOCELL",
+      "source": "Pexels (free license)",
+      "productPage": "https://www.pexels.com/photo/blue-pattern-texture-macro-6292/",
+      "imageUrl": "https://images.pexels.com/photos/6292/blue-pattern-texture-macro.jpg",
+      "localFile": "/images/fabrics/steel-blue-lyocell.jpg",
+      "bytes": 93140,
+      "contentType": "image/jpeg",
+      "rights": "free",
+      "note": "Free Pexels stock photo of blue woven fabric used for the Steel blue Lyocell swatch."
+    },
+    {
+      "sku": "FABRIC-TEAL-WIDE",
+      "source": "Pexels (free license)",
+      "productPage": "https://www.pexels.com/photo/green-textured-textile-surface-6276067/",
+      "imageUrl": "https://images.pexels.com/photos/6276067/pexels-photo-6276067.jpeg",
+      "localFile": "/images/fabrics/teal-wool-wide.jpg",
+      "bytes": 140693,
+      "contentType": "image/jpeg",
+      "rights": "free",
+      "note": "Free Pexels stock photo of teal-green textile used for the wide fabric banner on the fabrics page."
     }
   ],
   "skipped": []

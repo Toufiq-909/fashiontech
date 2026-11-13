@@ -30,6 +30,15 @@ function clampPos(value: number) {
   return Math.max(8, Math.min(92, value));
 }
 
+function loadImage(source: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(new Error("image"));
+    image.src = source;
+  });
+}
+
 export function TeeCustomiser() {
   const cart = useCart();
   const [colour, setColour] = useState<keyof typeof MOCKUPS>("white");
@@ -46,6 +55,8 @@ export function TeeCustomiser() {
   const [artScale, setArtScale] = useState(1);
   const [artError, setArtError] = useState<string | null>(null);
   const [added, setAdded] = useState(false);
+  const [downloadBusy, setDownloadBusy] = useState<"front" | "back" | null>(null);
+  const [downloadError, setDownloadError] = useState<string | null>(null);
 
   const previewRef = useRef<HTMLDivElement>(null);
   const dragRef = useRef<{ pointerX: number; pointerY: number; startX: number; startY: number } | null>(null);
@@ -133,6 +144,66 @@ export function TeeCustomiser() {
     setAdded(true);
   }
 
+  // Re-renders one side of the preview onto a canvas at the mockup's full
+  // resolution and downloads it. Percent positions and cqi sizes scale
+  // directly to the natural image width, matching the on-screen preview.
+  async function downloadSide(target: "front" | "back") {
+    setDownloadBusy(target);
+    setDownloadError(null);
+    try {
+      const mockupImage = await loadImage(mockup.src);
+      const width = mockupImage.naturalWidth;
+      const height = mockupImage.naturalHeight;
+      const canvas = document.createElement("canvas");
+      canvas.width = width;
+      canvas.height = height;
+      const context = canvas.getContext("2d");
+      if (!context) throw new Error("canvas");
+
+      context.save();
+      if (target === "back") {
+        context.translate(width, 0);
+        context.scale(-1, 1);
+      }
+      context.drawImage(mockupImage, 0, 0, width, height);
+      context.restore();
+
+      if (target === "front" && text.trim()) {
+        context.font = `800 ${textScale * 0.06 * width}px "DM Sans", ui-sans-serif, system-ui, sans-serif`;
+        context.letterSpacing = "0.04em";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        if (colour !== "white") {
+          context.shadowColor = "rgba(0,0,0,0.35)";
+          context.shadowBlur = 2;
+        }
+        context.fillStyle = mockup.text;
+        context.fillText(text.trim(), (textPos.x / 100) * width, (textPos.y / 100) * height);
+      }
+
+      if (target === "back" && art) {
+        const artImage = await loadImage(art);
+        const artWidth = artScale * 0.22 * width;
+        const artHeight = artWidth * (artImage.naturalHeight / artImage.naturalWidth);
+        context.drawImage(
+          artImage,
+          (artPos.x / 100) * width - artWidth / 2,
+          (artPos.y / 100) * height - artHeight / 2,
+          artWidth,
+          artHeight,
+        );
+      }
+
+      const link = document.createElement("a");
+      link.href = canvas.toDataURL("image/png");
+      link.download = `butterfly-tee-${target}-${colour}.png`;
+      link.click();
+    } catch {
+      setDownloadError("Sorry, the download didn't work. Please try again.");
+    }
+    setDownloadBusy(null);
+  }
+
   return (
     <div className="shop-layout" style={{ gridTemplateColumns: "minmax(0, 1.1fr) minmax(0, 1fr)" }}>
       {/* Preview */}
@@ -199,6 +270,25 @@ export function TeeCustomiser() {
             ? "Your text sits on the chest. Drag it on the shirt to move it."
             : "Your artwork sits on the back. Drag it on the shirt to move it."}
         </p>
+        <div className="cta-row mt-3">
+          <button
+            type="button"
+            className="mini-btn"
+            onClick={() => void downloadSide("front")}
+            disabled={downloadBusy !== null}
+          >
+            {downloadBusy === "front" ? "Preparing…" : "Download front"}
+          </button>
+          <button
+            type="button"
+            className="mini-btn"
+            onClick={() => void downloadSide("back")}
+            disabled={downloadBusy !== null}
+          >
+            {downloadBusy === "back" ? "Preparing…" : "Download back"}
+          </button>
+        </div>
+        {downloadError ? <p className="hint mt-2" style={{ color: "#BD4444" }}>{downloadError}</p> : null}
       </div>
 
       {/* Controls */}

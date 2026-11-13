@@ -6,7 +6,7 @@ import { FormEvent, useEffect, useState } from "react";
 type Recommendation = { name: string; brand: string; priceINR: number; fabric: string; href: string };
 type BotReply = { message: string; results: Recommendation[] };
 
-const QUICK_PROMPTS = ["Easy-care shirts", "Merino for travel", "Something under ₹2,000"];
+const QUICK_PROMPTS = ["I want formals", "Easy-care shirts", "Merino for travel", "Something under ₹2,000"];
 
 export function StyleConcierge() {
   const [open, setOpen] = useState(false);

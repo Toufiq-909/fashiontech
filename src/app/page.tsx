@@ -53,7 +53,7 @@ export default function HomePage() {
       (a, b) =>
         Number(b.isNew) - Number(a.isNew) || b.lastSyncedAt.localeCompare(a.lastSyncedAt),
     )
-    .slice(0, 4);
+    .slice(12, 16);
   const picks = butterflyPicks(8).filter((product) => !isActivewear(product)).slice(0, 4);
   const feedback = getDb()
     .feedback.filter((item) => item.featured)
@@ -89,7 +89,7 @@ export default function HomePage() {
             <div className="hero-copy hero-enter">
               <h1 className="hero-type" aria-label="Live to Love.">
                 <span className="hero-line">Made for</span>
-                <span className="hero-line hero-line-accent">living.</span>
+                <span className="hero-line hero-line-accent pb-6">living.</span>
               </h1>
               <p className="hero-lede">
                 Merino and Lyocell pieces selected for the way they feel, move and endure.
@@ -324,7 +324,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="fabric-strip">
+      {/* <section className="fabric-strip">
         <div className="shell fabric-strip-inner">
           <div>
             <p className="eyebrow">The fibres</p>
@@ -353,7 +353,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section shell">
         <div className="section-head">
